@@ -6,7 +6,7 @@ import restaurantImage from '@/assets/frye-interior.jpg';
 import burgerImage from '@/assets/frye-burger.jpg';
 import friedChickenImage from '@/assets/frye-sandwich.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
-import fryeHouseLogo from '@/assets/frye-house-logo.jpg';
+import fryeHouseLogo from '@/assets/frye-house-circular-logo.png';
 
 export default function Home() {
   return (
@@ -43,15 +43,12 @@ export default function Home() {
               <div className="md:w-2/5 flex justify-center items-center md:justify-end">
                 <div className="relative">
                   <div className="absolute inset-0 bg-amber-200/20 rounded-full blur-xl transform scale-110"></div>
-                  <div className="relative bg-white rounded-full p-5 shadow-lg border-4 border-amber-100/50">
+                  <div className="relative bg-white rounded-full p-4 shadow-lg border-4 border-amber-100/50">
                     <img 
                       src={fryeHouseLogo} 
                       alt="Frye House Logo" 
-                      className="w-64 h-auto"
+                      className="w-72 h-auto object-contain"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 text-center text-primary/70 text-sm font-medium pb-2">
-                      EST. 2010
-                    </div>
                   </div>
                 </div>
               </div>
