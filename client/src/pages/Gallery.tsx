@@ -2,7 +2,7 @@ import GalleryComponent from "@/components/Gallery";
 
 export default function Gallery() {
   return (
-    <main>
+    <main className="bg-pattern-section">
       <div className="pt-8 pb-4 bg-primary/5">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
