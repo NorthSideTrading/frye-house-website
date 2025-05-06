@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Utensils, Fish, Beef, Clock, MapPin, Phone } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
 import restaurantImage from '@/assets/frye-interior.jpg';
-import burgerImage from '@/assets/frye-burger.jpg';
-import friedChickenImage from '@/assets/frye-sandwich.jpg';
-import seafoodImage from '@/assets/frye-seafood.jpg';
+import burgerImage from '@/assets/frye-burger-new.jpg';
+import friedChickenImage from '@/assets/frye-fried-platter.jpg';
+import seafoodImage from '@/assets/frye-seafood-new.jpg';
 import fryeHouseLogo from '@/assets/frye-house-circular-logo.png';
 import Testimonials from '@/components/Testimonials';
 
@@ -92,7 +92,7 @@ export default function Home() {
             <div className="h-56 overflow-hidden relative">
               <img 
                 src={friedChickenImage} 
-                alt="Fried Chicken" 
+                alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -118,7 +118,7 @@ export default function Home() {
             <div className="h-56 overflow-hidden relative">
               <img 
                 src={seafoodImage} 
-                alt="Seafood" 
+                alt="Frye House Maine Lobster Roll" 
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -144,7 +144,7 @@ export default function Home() {
             <div className="h-56 overflow-hidden relative">
               <img 
                 src={burgerImage} 
-                alt="Burger" 
+                alt="Frye House Double Cheeseburger" 
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
