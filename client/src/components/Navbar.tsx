@@ -59,6 +59,12 @@ export default function Navbar() {
               Menu
             </Link>
             <Link 
+              href="/gallery" 
+              className={`py-2 ${isActive('/gallery') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300 font-semibold`}
+            >
+              Gallery
+            </Link>
+            <Link 
               href="/contact" 
               className={`py-2 ${isActive('/contact') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300 font-semibold`}
             >
@@ -83,6 +89,13 @@ export default function Navbar() {
               className={`block py-2 ${isActive('/menu') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300`}
             >
               Menu
+            </Link>
+            <Link 
+              href="/gallery" 
+              onClick={closeMenu}
+              className={`block py-2 ${isActive('/gallery') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300`}
+            >
+              Gallery
             </Link>
             <Link 
               href="/contact" 
