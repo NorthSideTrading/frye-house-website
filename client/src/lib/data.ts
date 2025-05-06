@@ -340,7 +340,7 @@ export const drinks: MenuItem[] = [
 export const restaurantInfo = {
   name: "Frye House",
   phone: "(207) 203-0152",
-  address: "297 Maine Ave, Farmingdale, ME 04344",
+  address: "557 Maine Ave, Farmingdale, ME 04344",
   hours: {
     monday: "11:00 AM - 8:00 PM",
     tuesday: "11:00 AM - 8:00 PM",
@@ -351,5 +351,5 @@ export const restaurantInfo = {
     sunday: "12:00 PM - 7:00 PM"
   },
   facebookUrl: "https://m.facebook.com/100044722821803/",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.7072683758036!2d-69.8340347!3d44.252827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb204bfb8fc3ee1%3A0x67e5fb2e2a7cfa89!2s297%20Maine%20Ave%2C%20Farmingdale%2C%20ME%2004344!5e0!3m2!1sen!2sus!4v1636735214837!5m2!1sen!2sus"
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.1435690613186!2d-69.8304145!3d44.264724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb205002d5aaaab%3A0x1269c4825c03b544!2s557%20Maine%20Ave%2C%20Farmingdale%2C%20ME%2004344!5e0!3m2!1sen!2sus!4v1620765214837!5m2!1sen!2sus"
 };
