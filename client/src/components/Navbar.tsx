@@ -48,19 +48,19 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-8">
             <Link 
               href="/" 
-              className={`py-2 ${isActive('/') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300 font-semibold`}
+              className={`py-2 ${isActive('/') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300 font-semibold`}
             >
               Home
             </Link>
             <Link 
               href="/menu" 
-              className={`py-2 ${isActive('/menu') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300 font-semibold`}
+              className={`py-2 ${isActive('/menu') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300 font-semibold`}
             >
               Menu
             </Link>
             <Link 
               href="/contact" 
-              className={`py-2 ${isActive('/contact') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300 font-semibold`}
+              className={`py-2 ${isActive('/contact') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300 font-semibold`}
             >
               Contact
             </Link>
@@ -73,21 +73,21 @@ export default function Navbar() {
             <Link 
               href="/" 
               onClick={closeMenu}
-              className={`block py-2 ${isActive('/') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300`}
+              className={`block py-2 ${isActive('/') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300`}
             >
               Home
             </Link>
             <Link 
               href="/menu" 
               onClick={closeMenu}
-              className={`block py-2 ${isActive('/menu') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300`}
+              className={`block py-2 ${isActive('/menu') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300`}
             >
               Menu
             </Link>
             <Link 
               href="/contact" 
               onClick={closeMenu}
-              className={`block py-2 ${isActive('/contact') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300`}
+              className={`block py-2 ${isActive('/contact') ? 'text-accent font-bold' : 'text-primary hover:text-accent'} transition duration-300`}
             >
               Contact
             </Link>

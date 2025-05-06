@@ -1,6 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { useMenuTabs } from '@/hooks/use-menu-tabs';
 import { burgers, seafood, sandwiches, sides } from '@/lib/data';
+import burgerImage from '@/assets/frye-burger.jpg';
+import seafoodImage from '@/assets/frye-seafood.jpg';
+import sandwichImage from '@/assets/frye-sandwich.jpg';
 
 export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
@@ -68,11 +71,19 @@ export default function Menu() {
           {/* Burgers Section */}
           {isActive('burgers') && (
             <div className="menu-category">
-              <h3 className="text-2xl font-heading font-semibold mb-8 menu-section-title">Burgers</h3>
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={burgerImage} alt="Frye House Burgers" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Burgers</h3>
+                  <p className="text-foreground">Our signature burgers are made with fresh, locally-sourced ingredients and cooked to perfection. Each burger comes with your choice of fries or house salad.</p>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {burgers.map((burger, index) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{burger.name}</h4>
@@ -89,11 +100,19 @@ export default function Menu() {
           {/* Seafood Section */}
           {isActive('seafood') && (
             <div className="menu-category">
-              <h3 className="text-2xl font-heading font-semibold mb-8 menu-section-title">Seafood</h3>
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={seafoodImage} alt="Frye House Seafood" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Seafood</h3>
+                  <p className="text-foreground">Our fresh seafood is sourced locally whenever possible. We take pride in serving the finest seafood dishes made with traditional recipes and a modern twist.</p>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {seafood.map((item, index) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
@@ -110,11 +129,19 @@ export default function Menu() {
           {/* Sandwiches Section */}
           {isActive('sandwiches') && (
             <div className="menu-category">
-              <h3 className="text-2xl font-heading font-semibold mb-8 menu-section-title">Sandwiches</h3>
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={sandwichImage} alt="Frye House Sandwiches" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sandwiches</h3>
+                  <p className="text-foreground">Our sandwiches are made with freshly baked bread and premium ingredients. Each sandwich is served with your choice of fries, chips, or house salad.</p>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {sandwiches.map((sandwich, index) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{sandwich.name}</h4>
@@ -131,11 +158,19 @@ export default function Menu() {
           {/* Sides Section */}
           {isActive('sides') && (
             <div className="menu-category">
-              <h3 className="text-2xl font-heading font-semibold mb-8 menu-section-title">Sides</h3>
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={seafoodImage} alt="Frye House Sides" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sides</h3>
+                  <p className="text-foreground">Complete your meal with our selection of delicious sides. From crispy fries to fresh salads, we have the perfect complement to your main dish.</p>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {sides.map((side, index) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{side.name}</h4>
