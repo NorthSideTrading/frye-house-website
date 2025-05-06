@@ -5,37 +5,37 @@ import { MenuItem } from './types';
 export const dinnerBaskets: MenuItem[] = [
   {
     name: "Chicken Dinner Basket",
-    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Includes: Fries, Roll & Coleslaw",
     price: "$13.50"
   },
   {
     name: "Haddock Dinner Basket",
-    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Includes: Fries, Roll & Coleslaw",
     price: "$14.95"
   },
   {
     name: "Scallops Dinner Basket",
-    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Includes: Fries, Roll & Coleslaw",
     price: "$19.50"
   },
   {
     name: "Shrimp Dinner Basket",
-    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Includes: Fries, Roll & Coleslaw",
     price: "$19.50"
   },
   {
     name: "Clam Dinner Basket",
-    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Includes: Fries, Roll & Coleslaw",
     price: "$21.95"
   },
   {
     name: "Mixed Sea Dinner Basket",
-    description: "Haddock, shrimp, clams & scallops. Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Haddock, shrimp, clams & scallops. Includes: Fries, Roll & Coleslaw",
     price: "$21.95"
   },
   {
     name: "Pork Tenderloin Dinner Basket",
-    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    description: "Includes: Fries, Roll & Coleslaw",
     price: "$13.50"
   }
 ];
@@ -43,37 +43,37 @@ export const dinnerBaskets: MenuItem[] = [
 export const snacks: MenuItem[] = [
   {
     name: "Chicken Snack",
-    description: "With Fries. With Onion Rings Add $1.00",
+    description: "With Fries",
     price: "$9.95"
   },
   {
     name: "Haddock Snack",
-    description: "With Fries. With Onion Rings Add $1.00",
+    description: "With Fries",
     price: "$11.95"
   },
   {
     name: "Scallops Snack",
-    description: "With Fries. With Onion Rings Add $1.00",
+    description: "With Fries",
     price: "$16.50"
   },
   {
     name: "Shrimp Snack",
-    description: "With Fries. With Onion Rings Add $1.00",
+    description: "With Fries",
     price: "$13.95"
   },
   {
     name: "Clams Snack",
-    description: "With Fries. With Onion Rings Add $1.00",
+    description: "With Fries",
     price: "$17.50"
   },
   {
     name: "Mixed Sea Snack",
-    description: "Haddock, shrimp, clams & scallops. With Fries. With Onion Rings Add $1.00",
+    description: "Haddock, shrimp, clams & scallops. With Fries",
     price: "$16.95"
   },
   {
     name: "Pork Snack",
-    description: "With Fries. With Onion Rings Add $1.00",
+    description: "With Fries",
     price: "$9.95"
   }
 ];
@@ -119,7 +119,7 @@ export const pints: MenuItem[] = [
 export const specialties: MenuItem[] = [
   {
     name: "Family Meal",
-    description: "Includes: 2 Pints of Chicken, Fries, coleslaw, dinner rolls, and 2 Liter of Soda. Sub Onion Rings for $3.00. Feeds Four",
+    description: "Includes: 2 Pints of Chicken, Fries, coleslaw, dinner rolls, and 2 Liter of Soda. Feeds Four",
     price: "$26.95"
   },
   {

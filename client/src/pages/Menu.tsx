@@ -4,7 +4,7 @@ import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, dr
 import burgerImage from '@/assets/frye-burger.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
 import sandwichImage from '@/assets/frye-sandwich.jpg';
-import { MenuItem } from '@/lib/types';
+import type { MenuItem } from '../lib/types';
 
 export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
@@ -126,7 +126,7 @@ export default function Menu() {
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Dinner Baskets</h3>
-                  <p className="text-foreground">Our dinner baskets include fries, roll & coleslaw. Upgrade to onion rings for just $2.00 more.</p>
+                  <p className="text-foreground">Our dinner baskets include fries, roll & coleslaw.</p>
                 </div>
               </div>
               
@@ -155,7 +155,7 @@ export default function Menu() {
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Snacks</h3>
-                  <p className="text-foreground">Our snack options come with fries. Upgrade to onion rings for just $1.00 more.</p>
+                  <p className="text-foreground">Our snack options come with fries.</p>
                 </div>
               </div>
               
@@ -271,7 +271,7 @@ export default function Menu() {
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sandwiches</h3>
-                  <p className="text-foreground">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries or onion rings to make it a meal.</p>
+                  <p className="text-foreground">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries to make it a meal.</p>
                 </div>
               </div>
               
