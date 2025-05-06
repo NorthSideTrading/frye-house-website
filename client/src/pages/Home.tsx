@@ -42,12 +42,12 @@ export default function Home() {
               
               <div className="md:w-2/5 flex justify-center items-center md:justify-end">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-amber-200/20 rounded-full blur-xl transform scale-110"></div>
-                  <div className="relative bg-white rounded-full p-4 shadow-lg border-4 border-amber-100/50">
+                  <div className="absolute inset-0 bg-amber-200/20 blur-xl transform scale-110"></div>
+                  <div className="relative">
                     <img 
                       src={fryeHouseLogo} 
                       alt="Frye House Logo" 
-                      className="w-72 h-auto object-contain"
+                      className="w-80 h-auto object-contain drop-shadow-md"
                     />
                   </div>
                 </div>
