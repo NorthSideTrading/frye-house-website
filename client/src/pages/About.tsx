@@ -27,7 +27,7 @@ export default function About() {
                 alt="Frye House Food Collage" 
                 className="rounded-lg shadow-xl w-full h-auto object-cover z-10"
               />
-              <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+              <div className="absolute top-4 right-4 flex justify-center">
                 <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-amber-100">
                   <div className="flex items-center justify-center gap-2">
                     <Heart className="text-accent w-5 h-5" />
