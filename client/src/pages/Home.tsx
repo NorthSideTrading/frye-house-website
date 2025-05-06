@@ -2,6 +2,10 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Utensils, Fish, Beef } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
+import restaurantImage from '@/assets/restaurant-interior.jpg';
+import burgerImage from '@/assets/burger.jpg';
+import friedChickenImage from '@/assets/fried-chicken.jpg';
+import seafoodImage from '@/assets/seafood.jpg';
 
 export default function Home() {
   return (
@@ -26,43 +30,59 @@ export default function Home() {
           
           <div className="md:w-1/2">
             <img 
-              src="https://img.freepik.com/free-photo/restaurant-interior-with-wooden-tables-elegant-chairs_176474-762.jpg" 
-              alt="Frye House Restaurant" 
+              src={restaurantImage} 
+              alt="Frye House Restaurant Interior" 
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </div>
         </div>
         
         {/* Features/Highlights Section */}
+        <h2 className="text-3xl font-heading font-bold text-primary mb-8 text-center mt-16">Our Specialties</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-          <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent">
-            <div className="text-accent mb-3">
-              <Utensils className="h-8 w-8" />
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="h-48 overflow-hidden">
+              <img src={friedChickenImage} alt="Fried Chicken" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-3">Homemade Specialties</h3>
-            <p className="text-foreground">
-              Enjoy our selection of homemade dishes prepared with locally sourced ingredients.
-            </p>
+            <div className="p-6 border-t-4 border-accent">
+              <div className="text-accent mb-3">
+                <Utensils className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">Homemade Specialties</h3>
+              <p className="text-foreground">
+                Enjoy our selection of homemade dishes prepared with locally sourced ingredients.
+              </p>
+            </div>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent">
-            <div className="text-accent mb-3">
-              <Fish className="h-8 w-8" />
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="h-48 overflow-hidden">
+              <img src={seafoodImage} alt="Seafood" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-3">Fresh Seafood</h3>
-            <p className="text-foreground">
-              We're known for our delicious seafood options, freshly prepared to perfection.
-            </p>
+            <div className="p-6 border-t-4 border-accent">
+              <div className="text-accent mb-3">
+                <Fish className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">Fresh Seafood</h3>
+              <p className="text-foreground">
+                We're known for our delicious seafood options, freshly prepared to perfection.
+              </p>
+            </div>
           </div>
           
-          <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent">
-            <div className="text-accent mb-3">
-              <Beef className="h-8 w-8" />
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="h-48 overflow-hidden">
+              <img src={burgerImage} alt="Burger" className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-3">Signature Burgers</h3>
-            <p className="text-foreground">
-              Try our famous burgers with a variety of toppings and house special sauces.
-            </p>
+            <div className="p-6 border-t-4 border-accent">
+              <div className="text-accent mb-3">
+                <Beef className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">Signature Burgers</h3>
+              <p className="text-foreground">
+                Try our famous burgers with a variety of toppings and house special sauces.
+              </p>
+            </div>
           </div>
         </div>
       </div>
