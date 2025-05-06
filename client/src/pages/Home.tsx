@@ -56,18 +56,20 @@ export default function Home() {
           
           {/* Quick Info Bar */}
           <div className="bg-primary text-white py-4 px-6">
-            <div className="flex flex-col md:flex-row justify-around items-center gap-4 text-sm md:text-base">
-              <div className="flex items-center">
-                <Phone className="h-5 w-5 mr-2" />
-                <span>{restaurantInfo.phone}</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2" />
-                <span>{restaurantInfo.address}</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="h-5 w-5 mr-2" />
-                <span>Open Today: {restaurantInfo.hours.monday}</span>
+            <div className="container mx-auto max-w-5xl">
+              <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm">
+                <div className="flex items-center w-full lg:w-auto justify-center">
+                  <Phone className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="whitespace-nowrap">{restaurantInfo.phone}</span>
+                </div>
+                <div className="flex items-center w-full lg:w-auto justify-center">
+                  <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="whitespace-nowrap">{restaurantInfo.address}</span>
+                </div>
+                <div className="flex items-center w-full lg:w-auto justify-center">
+                  <Clock className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="whitespace-nowrap">Open Today: {restaurantInfo.hours.monday}</span>
+                </div>
               </div>
             </div>
           </div>
