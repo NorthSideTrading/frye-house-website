@@ -1,5 +1,5 @@
-// Menu Item Types
-import { MenuItem } from './types';
+// Types
+import { MenuItem, Testimonial } from './types';
 
 // Menu Data
 export const dinnerBaskets: MenuItem[] = [
@@ -353,3 +353,43 @@ export const restaurantInfo = {
   facebookUrl: "https://m.facebook.com/100044722821803/",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.1435690613186!2d-69.8304145!3d44.264724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb205002d5aaaab%3A0x1269c4825c03b544!2s557%20Maine%20Ave%2C%20Farmingdale%2C%20ME%2004344!5e0!3m2!1sen!2sus!4v1620765214837!5m2!1sen!2sus"
 };
+
+// Customer Testimonials - Real reviews from Google
+export const testimonials: Testimonial[] = [
+  {
+    name: "Arica Murphy",
+    rating: 5,
+    date: "May 2024",
+    text: "Best seafood and great burgers. Great service too."
+  },
+  {
+    name: "Rebekkah C",
+    rating: 5,
+    date: "April 2024",
+    text: "This place may be unassuming from the outside, but the food was AMAZING! We had haddock, onion rings, and fried clams. The portions were generous for the price and the food was excellent. Crispy breading and fresh fish. If we're ever in the area, we are definitely coming back."
+  },
+  {
+    name: "Debbie Trask",
+    rating: 5,
+    date: "March 2024",
+    text: "I've had the clam basket before and was delicious. Today I stopped and had a Lobster Roll. I've had many, but this is one of the best I've had. Soft and buttery toasted roll, large chunks of lobster. Didn't need to be swimming in mayo, because it wasn't dry at all. Great job!"
+  },
+  {
+    name: "Celina Curtis",
+    rating: 5,
+    date: "February 2024",
+    text: "Omgosh, they are one of the best places to eat. So good. Clean, great prices for the quality of food you get. I can't say enough. We make it a point to go there often, and every time it's consistent!!! TRY IT!!"
+  },
+  {
+    name: "Dave",
+    rating: 5,
+    date: "January 2024",
+    text: "Great food, fantastic service. The food is made fresh and is delicious, you can't go wrong with anything on the menu. Friendly staff and great atmosphere."
+  },
+  {
+    name: "Alyssa Chretien",
+    rating: 5,
+    date: "December 2023",
+    text: "Great food, great prices! Will definitely be back!"
+  }
+];

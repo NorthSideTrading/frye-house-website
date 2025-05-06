@@ -7,6 +7,7 @@ import burgerImage from '@/assets/frye-burger.jpg';
 import friedChickenImage from '@/assets/frye-sandwich.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
 import fryeHouseLogo from '@/assets/frye-house-circular-logo.png';
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
