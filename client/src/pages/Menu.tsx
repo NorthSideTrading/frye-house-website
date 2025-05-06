@@ -16,6 +16,21 @@ import soupsImage from '@/assets/frye-soups.jpg';
 import drinksImage from '@/assets/frye-drinks.jpg';
 import type { MenuItem } from '../lib/types';
 
+// Enhanced menu item component for a more stylish display
+const MenuItemCard = ({ item }: { item: MenuItem }) => {
+  return (
+    <div className="bg-background p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-b-4 border-accent group hover:bg-accent/5">
+      <div className="flex justify-between items-start">
+        <div>
+          <h4 className="text-xl font-heading font-bold text-primary group-hover:text-primary/90">{item.name}</h4>
+          <p className="text-foreground/80 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+        <span className="bg-accent/90 text-white font-semibold px-3 py-1 rounded-full ml-4 text-sm shadow-sm group-hover:bg-accent group-hover:shadow-md transition-all duration-300">{item.price}</span>
+      </div>
+    </div>
+  );
+};
+
 export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
   const [searchQuery, setSearchQuery] = useState('');
@@ -211,13 +226,20 @@ export default function Menu() {
               {/* Dinner Baskets Section */}
               {isActive('dinnerBaskets') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={dinnerBasketImage} alt="Frye House Dinner Baskets" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={dinnerBasketImage} 
+                        alt="Frye House Dinner Baskets" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Dinner Baskets</h3>
-                      <p className="text-foreground">Our dinner baskets include fries, roll & coleslaw.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Dinner Baskets</h3>
+                        <p className="text-foreground/90 italic">Our dinner baskets include fries, roll & coleslaw.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -240,13 +262,20 @@ export default function Menu() {
               {/* Snacks Section */}
               {isActive('snacks') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={snacksImage} alt="Frye House Snacks" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={snacksImage} 
+                        alt="Frye House Snacks" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Snacks</h3>
-                      <p className="text-foreground">Our snack options come with fries.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Snacks</h3>
+                        <p className="text-foreground/90 italic">Our snack options come with fries.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -269,13 +298,20 @@ export default function Menu() {
               {/* Pints Section */}
               {isActive('pints') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={pintsImage} alt="Frye House Pints" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={pintsImage} 
+                        alt="Frye House Pints" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Pints</h3>
-                      <p className="text-foreground">Generous pint-sized servings of our delicious fried foods.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Pints</h3>
+                        <p className="text-foreground/90 italic">Generous pint-sized servings of our delicious fried foods.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -298,13 +334,20 @@ export default function Menu() {
               {/* Specialties Section */}
               {isActive('specialties') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={specialtiesImage} alt="Frye House Specialties" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={specialtiesImage} 
+                        alt="Frye House Specialties" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Specialties</h3>
-                      <p className="text-foreground">Try our specialties including the Family Meal, wings, and our famous lobster rolls.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Specialties</h3>
+                        <p className="text-foreground/90 italic">Try our specialties including the Family Meal, wings, and our famous lobster rolls.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -327,13 +370,20 @@ export default function Menu() {
               {/* Soups Section */}
               {isActive('soups') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={soupsImage} alt="Frye House Soups" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={soupsImage} 
+                        alt="Frye House Soups" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Soups & Stews</h3>
-                      <p className="text-foreground">Our hearty soups and stews are the perfect way to warm up on a cool day or add to your meal.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Soups & Stews</h3>
+                        <p className="text-foreground/90 italic">Our hearty soups and stews are the perfect way to warm up on a cool day or add to your meal.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -356,13 +406,20 @@ export default function Menu() {
               {/* Sandwiches Section */}
               {isActive('sandwiches') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={sandwichImage} alt="Frye House Sandwiches" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={sandwichImage} 
+                        alt="Frye House Sandwiches" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sandwiches</h3>
-                      <p className="text-foreground">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries to make it a meal.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Sandwiches</h3>
+                        <p className="text-foreground/90 italic">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries to make it a meal.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -385,13 +442,20 @@ export default function Menu() {
               {/* Sides Section */}
               {isActive('sides') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={sidesImage} alt="Frye House Sides" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={sidesImage} 
+                        alt="Frye House Sides" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sides</h3>
-                      <p className="text-foreground">Complete your meal with our selection of delicious sides. From onion rings to fried pickles, we have the perfect complement to your main dish.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Sides</h3>
+                        <p className="text-foreground/90 italic">Complete your meal with our selection of delicious sides. From onion rings to fried pickles, we have the perfect complement to your main dish.</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -414,13 +478,20 @@ export default function Menu() {
               {/* Drinks Section */}
               {isActive('drinks') && (
                 <div className="menu-category">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                    <div className="md:w-1/3">
-                      <img src={drinksImage} alt="Frye House Drinks" className="rounded-lg shadow-lg w-full h-auto" />
+                  <div className="relative mb-16">
+                    <div className="w-full h-64 md:h-72 overflow-hidden rounded-xl shadow-xl">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                      <img 
+                        src={drinksImage} 
+                        alt="Frye House Drinks" 
+                        className="w-full h-full object-cover object-center" 
+                      />
                     </div>
-                    <div className="md:w-2/3">
-                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Drinks</h3>
-                      <p className="text-foreground">Quench your thirst with our selection of refreshing beverages and delicious milkshakes.</p>
+                    <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl p-6 border-l-4 border-accent">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-primary">Drinks</h3>
+                        <p className="text-foreground/90 italic">Quench your thirst with our selection of refreshing beverages and delicious milkshakes.</p>
+                      </div>
                     </div>
                   </div>
                   
