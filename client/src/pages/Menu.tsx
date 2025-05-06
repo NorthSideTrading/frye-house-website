@@ -226,7 +226,7 @@ export default function Menu() {
                       <img 
                         src={dinnerBasketImage} 
                         alt="Frye House Dinner Baskets" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -254,7 +254,7 @@ export default function Menu() {
                       <img 
                         src={snacksImage} 
                         alt="Frye House Snacks" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -282,7 +282,7 @@ export default function Menu() {
                       <img 
                         src={pintsImage} 
                         alt="Frye House Pints" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -310,7 +310,7 @@ export default function Menu() {
                       <img 
                         src={specialtiesImage} 
                         alt="Frye House Specialties" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -338,7 +338,7 @@ export default function Menu() {
                       <img 
                         src={soupsImage} 
                         alt="Frye House Soups" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -366,7 +366,7 @@ export default function Menu() {
                       <img 
                         src={sandwichImage} 
                         alt="Frye House Sandwiches" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -394,7 +394,7 @@ export default function Menu() {
                       <img 
                         src={sidesImage} 
                         alt="Frye House Sides" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
@@ -422,7 +422,7 @@ export default function Menu() {
                       <img 
                         src={drinksImage} 
                         alt="Frye House Drinks" 
-                        className="w-full h-full object-cover object-center" 
+                        className="w-full h-full object-contain" 
                       />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20 px-6 md:px-10">
