@@ -16,40 +16,58 @@ export default function Home() {
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl shadow-2xl overflow-hidden mb-20">
           <div className="relative p-8 md:p-12">
-            {/* Hero content with single logo */}
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-3/5 mb-10 md:mb-0 md:pr-8">
-                <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6 text-center md:text-left">
-                  Authentic Maine Cuisine
-                </h1>
-                <p className="text-lg mb-8 text-foreground leading-relaxed">
-                  Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
-                  We're passionate about serving quality food made with locally-sourced ingredients that brings people together.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
-                  <Link href="/menu">
-                    <Button className="bg-accent hover:bg-primary text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
-                      View Our Menu
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
-                      Find Us
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              
-              <div className="md:w-2/5 flex justify-center items-center md:justify-end">
+            {/* Hero content with logo */}
+            <div className="flex flex-col items-center">
+              {/* Mobile: Logo above text for small screens */}
+              <div className="flex md:hidden justify-center w-full mb-6">
                 <div className="relative">
                   <div className="absolute inset-0 bg-amber-200/20 blur-xl transform scale-110"></div>
                   <div className="relative">
                     <img 
                       src={fryeHouseLogo} 
                       alt="Frye House Logo" 
-                      className="w-80 h-auto object-contain drop-shadow-md"
+                      className="w-48 h-auto object-contain drop-shadow-md"
                     />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Desktop layout: Side by side */}
+              <div className="flex flex-col md:flex-row items-center w-full">
+                <div className="md:w-3/5 mb-6 md:mb-0 md:pr-8">
+                  <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6 text-center md:text-left">
+                    Authentic Maine Cuisine
+                  </h1>
+                  <p className="text-lg mb-8 text-foreground leading-relaxed">
+                    Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
+                    We're passionate about serving quality food made with locally-sourced ingredients that brings people together.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
+                    <Link href="/menu">
+                      <Button className="bg-accent hover:bg-primary text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
+                        View Our Menu
+                      </Button>
+                    </Link>
+                    <Link href="/contact">
+                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
+                        Find Us
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* Hide on mobile, show on desktop */}
+                <div className="hidden md:flex md:w-2/5 justify-center items-center md:justify-end">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-amber-200/20 blur-xl transform scale-110"></div>
+                    <div className="relative">
+                      <img 
+                        src={fryeHouseLogo} 
+                        alt="Frye House Logo" 
+                        className="w-80 h-auto object-contain drop-shadow-md"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
