@@ -222,11 +222,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={dinnerBasketImage} 
                           alt="Frye House Dinner Baskets" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -249,11 +249,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={snacksImage} 
                           alt="Frye House Snacks" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -276,11 +276,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={pintsImage} 
                           alt="Frye House Pints" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -303,11 +303,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={specialtiesImage} 
                           alt="Frye House Specialties" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -330,11 +330,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={soupsImage} 
                           alt="Frye House Soups" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -357,11 +357,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={sandwichImage} 
                           alt="Frye House Sandwiches" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -384,11 +384,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={sidesImage} 
                           alt="Frye House Sides" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
@@ -411,11 +411,11 @@ export default function Menu() {
                 <div className="menu-category">
                   <div className="mb-12">
                     <div className="flex flex-col items-center">
-                      <div className="w-full max-w-lg h-52 overflow-hidden rounded-lg bg-white p-4 mb-4 flex items-center justify-center">
+                      <div className="w-full h-64 md:h-80 overflow-hidden rounded-lg bg-white p-2 mb-4 flex items-center justify-center">
                         <img 
                           src={drinksImage} 
                           alt="Frye House Drinks" 
-                          className="max-h-full object-contain" 
+                          className="max-h-full max-w-full object-contain" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
