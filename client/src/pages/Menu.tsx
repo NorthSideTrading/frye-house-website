@@ -207,239 +207,239 @@ export default function Menu() {
         <div className="menu-content">
           {/* Only show menu categories when not searching */}
           {!searchQuery && (
-          <>
-          {/* Dinner Baskets Section */}
-          {isActive('dinnerBaskets') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={dinnerBasketImage} alt="Frye House Dinner Baskets" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Dinner Baskets</h3>
-                  <p className="text-foreground">Our dinner baskets include fries, roll & coleslaw.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {dinnerBaskets.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
-                      </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+            <>
+              {/* Dinner Baskets Section */}
+              {isActive('dinnerBaskets') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={dinnerBasketImage} alt="Frye House Dinner Baskets" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Dinner Baskets</h3>
+                      <p className="text-foreground">Our dinner baskets include fries, roll & coleslaw.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Snacks Section */}
-          {isActive('snacks') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={snacksImage} alt="Frye House Snacks" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Snacks</h3>
-                  <p className="text-foreground">Our snack options come with fries.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {snacks.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {dinnerBaskets.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Snacks Section */}
+              {isActive('snacks') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={snacksImage} alt="Frye House Snacks" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Snacks</h3>
+                      <p className="text-foreground">Our snack options come with fries.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Pints Section */}
-          {isActive('pints') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={pintsImage} alt="Frye House Pints" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Pints</h3>
-                  <p className="text-foreground">Generous pint-sized servings of our delicious fried foods.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {pints.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {snacks.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Pints Section */}
+              {isActive('pints') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={pintsImage} alt="Frye House Pints" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Pints</h3>
+                      <p className="text-foreground">Generous pint-sized servings of our delicious fried foods.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Specialties Section */}
-          {isActive('specialties') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={specialtiesImage} alt="Frye House Specialties" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Specialties</h3>
-                  <p className="text-foreground">Try our specialties including the Family Meal, wings, and our famous lobster rolls.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {specialties.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {pints.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Specialties Section */}
+              {isActive('specialties') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={specialtiesImage} alt="Frye House Specialties" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Specialties</h3>
+                      <p className="text-foreground">Try our specialties including the Family Meal, wings, and our famous lobster rolls.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Soups Section */}
-          {isActive('soups') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={soupsImage} alt="Frye House Soups" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Soups & Stews</h3>
-                  <p className="text-foreground">Our hearty soups and stews are the perfect way to warm up on a cool day or add to your meal.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {soups.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {specialties.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Soups Section */}
+              {isActive('soups') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={soupsImage} alt="Frye House Soups" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Soups & Stews</h3>
+                      <p className="text-foreground">Our hearty soups and stews are the perfect way to warm up on a cool day or add to your meal.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Sandwiches Section */}
-          {isActive('sandwiches') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={sandwichImage} alt="Frye House Sandwiches" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sandwiches</h3>
-                  <p className="text-foreground">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries to make it a meal.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {sandwiches.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {soups.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Sandwiches Section */}
+              {isActive('sandwiches') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={sandwichImage} alt="Frye House Sandwiches" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sandwiches</h3>
+                      <p className="text-foreground">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries to make it a meal.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Sides Section */}
-          {isActive('sides') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={sidesImage} alt="Frye House Sides" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sides</h3>
-                  <p className="text-foreground">Complete your meal with our selection of delicious sides. From onion rings to fried pickles, we have the perfect complement to your main dish.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {sides.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {sandwiches.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Sides Section */}
+              {isActive('sides') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={sidesImage} alt="Frye House Sides" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sides</h3>
+                      <p className="text-foreground">Complete your meal with our selection of delicious sides. From onion rings to fried pickles, we have the perfect complement to your main dish.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Drinks Section */}
-          {isActive('drinks') && (
-            <div className="menu-category">
-              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
-                <div className="md:w-1/3">
-                  <img src={drinksImage} alt="Frye House Drinks" className="rounded-lg shadow-lg w-full h-auto" />
-                </div>
-                <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Drinks</h3>
-                  <p className="text-foreground">Quench your thirst with our selection of refreshing beverages and delicious milkshakes.</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {drinks.map((item: MenuItem, index: number) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {sides.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Drinks Section */}
+              {isActive('drinks') && (
+                <div className="menu-category">
+                  <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                    <div className="md:w-1/3">
+                      <img src={drinksImage} alt="Frye House Drinks" className="rounded-lg shadow-lg w-full h-auto" />
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Drinks</h3>
+                      <p className="text-foreground">Quench your thirst with our selection of refreshing beverages and delicious milkshakes.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-          </>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {drinks.map((item: MenuItem, index: number) => (
+                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                            <p className="text-foreground mt-2">{item.description}</p>
+                          </div>
+                          <span className="text-accent font-semibold ml-4">{item.price}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
