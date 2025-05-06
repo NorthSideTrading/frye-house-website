@@ -167,6 +167,9 @@ export default function Home() {
           </div>
         </div>
         
+        {/* Testimonials Section */}
+        <Testimonials />
+        
         {/* Call to Action */}
         <div className="bg-primary text-white text-center py-12 px-6 rounded-xl mt-20 mb-8">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Experience the Taste of Maine Today</h3>
