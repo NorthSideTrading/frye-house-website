@@ -1,0 +1,94 @@
+import { useState } from 'react';
+import { Link, useLocation } from 'wouter';
+import { Menu, X } from 'lucide-react';
+
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [location] = useLocation();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const isActive = (path: string) => {
+    return location === path;
+  };
+
+  return (
+    <nav className="bg-primary text-white shadow-md sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex justify-between items-center">
+          <Link href="/" className="text-2xl font-heading font-bold">
+            Frye House
+          </Link>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={toggleMenu}
+            className="md:hidden text-white focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            <Link 
+              href="/" 
+              className={`py-2 ${isActive('/') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300 font-semibold`}
+            >
+              Home
+            </Link>
+            <Link 
+              href="/menu" 
+              className={`py-2 ${isActive('/menu') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300 font-semibold`}
+            >
+              Menu
+            </Link>
+            <Link 
+              href="/contact" 
+              className={`py-2 ${isActive('/contact') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300 font-semibold`}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+        
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-3 pb-2">
+            <Link 
+              href="/" 
+              onClick={closeMenu}
+              className={`block py-2 ${isActive('/') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300`}
+            >
+              Home
+            </Link>
+            <Link 
+              href="/menu" 
+              onClick={closeMenu}
+              className={`block py-2 ${isActive('/menu') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300`}
+            >
+              Menu
+            </Link>
+            <Link 
+              href="/contact" 
+              onClick={closeMenu}
+              className={`block py-2 ${isActive('/contact') ? 'text-secondary' : 'text-white hover:text-secondary'} transition duration-300`}
+            >
+              Contact
+            </Link>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+}
