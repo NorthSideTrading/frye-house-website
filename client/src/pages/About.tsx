@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Phone, MapPin, Clock, Users, Utensils, Heart } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
 import fryeHouseLogo from '@/assets/frye-house-logo.jpg';
-import burgerImage from '@/assets/frye-burger.jpg';
+import collageImage from '@/assets/frye-collage.jpg';
 
 export default function About() {
   return (
@@ -23,8 +23,8 @@ export default function About() {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-amber-100 rounded-lg -z-10"></div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-100 rounded-lg -z-10"></div>
               <img 
-                src={burgerImage} 
-                alt="Frye House Burger" 
+                src={collageImage} 
+                alt="Frye House Food Collage" 
                 className="rounded-lg shadow-xl w-full h-auto object-cover z-10"
               />
               <div className="absolute bottom-8 left-0 right-0 flex justify-center">
