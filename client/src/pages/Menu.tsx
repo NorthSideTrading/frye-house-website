@@ -12,7 +12,7 @@ export default function Menu() {
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-12 text-center">
           Our Menu
         </h2>
         
@@ -23,7 +23,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('dinnerBaskets') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('dinnerBaskets')}
           >
@@ -35,7 +35,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('snacks') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('snacks')}
           >
@@ -47,7 +47,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('pints') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('pints')}
           >
@@ -59,7 +59,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('specialties') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('specialties')}
           >
@@ -71,7 +71,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('soups') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('soups')}
           >
@@ -83,7 +83,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('sandwiches') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('sandwiches')}
           >
@@ -95,7 +95,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('sides') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('sides')}
           >
@@ -107,7 +107,7 @@ export default function Menu() {
             className={`rounded-full font-semibold ${
               isActive('drinks') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
-                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
             }`}
             onClick={() => changeCategory('drinks')}
           >
