@@ -7,7 +7,7 @@ import collageImage from '@/assets/frye-collage.jpg';
 
 export default function About() {
   return (
-    <section className="py-12 md:py-20 flex-grow">
+    <section className="py-12 md:py-20 flex-grow bg-pattern-section">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

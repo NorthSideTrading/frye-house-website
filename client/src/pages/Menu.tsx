@@ -17,9 +17,9 @@ export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-12 md:py-20 bg-white bg-pattern-section">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
           Our Menu
         </h2>
         

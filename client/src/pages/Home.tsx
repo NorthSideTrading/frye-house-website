@@ -10,7 +10,7 @@ import fryeHouseLogo from '@/assets/frye-house-circular-logo.png';
 
 export default function Home() {
   return (
-    <section className="py-12 md:py-20 flex-grow">
+    <section className="py-12 md:py-20 flex-grow bg-pattern-section">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl shadow-2xl overflow-hidden mb-20">
