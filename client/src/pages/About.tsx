@@ -90,24 +90,45 @@ export default function About() {
                   </p>
                 </div>
                 
-                <div className="mt-8 bg-amber-50/50 p-6 rounded-lg border border-amber-100/50">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
-                      <MapPin className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-primary">Find Us</h3>
-                      <p className="text-gray-600">{restaurantInfo.address}</p>
-                    </div>
+                {/* Map and Contact Info */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-heading font-semibold text-primary mb-4">Our Location</h3>
+                  
+                  {/* Google Map */}
+                  <div className="rounded-lg overflow-hidden shadow-md border border-amber-100 mb-6">
+                    <iframe 
+                      src={restaurantInfo.mapEmbedUrl}
+                      width="100%" 
+                      height="300" 
+                      style={{ border: 0 }} 
+                      allowFullScreen={false} 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Frye House Location"
+                      className="w-full"
+                    ></iframe>
                   </div>
                   
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
-                      <Phone className="h-6 w-6 text-accent" />
+                  {/* Contact Info */}
+                  <div className="bg-amber-50/50 p-6 rounded-lg border border-amber-100/50 flex flex-col md:flex-row justify-between">
+                    <div className="flex items-center mb-4 md:mb-0">
+                      <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+                        <MapPin className="h-6 w-6 text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-primary">Find Us</h3>
+                        <p className="text-gray-600">{restaurantInfo.address}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-primary">Contact Us</h3>
-                      <p className="text-gray-600">{restaurantInfo.phone}</p>
+                    
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mr-4">
+                        <Phone className="h-6 w-6 text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-primary">Contact Us</h3>
+                        <p className="text-gray-600">{restaurantInfo.phone}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
