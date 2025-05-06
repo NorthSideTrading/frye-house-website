@@ -13,7 +13,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">
               Welcome to {restaurantInfo.name}
             </h1>
-            <p className="text-lg mb-8 text-textDark leading-relaxed">
+            <p className="text-lg mb-8 text-foreground leading-relaxed">
               Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
               We're passionate about serving quality food that brings people together.
             </p>
@@ -40,7 +40,7 @@ export default function Home() {
               <Utensils className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-heading font-semibold mb-3">Homemade Specialties</h3>
-            <p className="text-textDark">
+            <p className="text-foreground">
               Enjoy our selection of homemade dishes prepared with locally sourced ingredients.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function Home() {
               <Fish className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-heading font-semibold mb-3">Fresh Seafood</h3>
-            <p className="text-textDark">
+            <p className="text-foreground">
               We're known for our delicious seafood options, freshly prepared to perfection.
             </p>
           </div>

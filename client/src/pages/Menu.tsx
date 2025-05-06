@@ -93,11 +93,11 @@ export default function Menu() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {seafood.map((item, index) => (
-                  <div key={index} className="bg-neutral p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-textDark mt-2">{item.description}</p>
+                        <p className="text-foreground mt-2">{item.description}</p>
                       </div>
                       <span className="text-accent font-semibold ml-4">{item.price}</span>
                     </div>
@@ -114,11 +114,11 @@ export default function Menu() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {sandwiches.map((sandwich, index) => (
-                  <div key={index} className="bg-neutral p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{sandwich.name}</h4>
-                        <p className="text-textDark mt-2">{sandwich.description}</p>
+                        <p className="text-foreground mt-2">{sandwich.description}</p>
                       </div>
                       <span className="text-accent font-semibold ml-4">{sandwich.price}</span>
                     </div>
@@ -135,11 +135,11 @@ export default function Menu() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {sides.map((side, index) => (
-                  <div key={index} className="bg-neutral p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="text-xl font-heading font-semibold text-primary">{side.name}</h4>
-                        <p className="text-textDark mt-2">{side.description}</p>
+                        <p className="text-foreground mt-2">{side.description}</p>
                       </div>
                       <span className="text-accent font-semibold ml-4">{side.price}</span>
                     </div>

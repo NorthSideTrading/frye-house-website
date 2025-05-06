@@ -3,7 +3,7 @@ import { restaurantInfo } from '@/lib/data';
 
 export default function Contact() {
   return (
-    <section className="py-12 md:py-20 bg-neutral">
+    <section className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
           Visit Us
@@ -24,7 +24,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Phone</h4>
-                    <p className="text-textDark">{restaurantInfo.phone}</p>
+                    <p className="text-foreground">{restaurantInfo.phone}</p>
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Address</h4>
-                    <p className="text-textDark">{restaurantInfo.address}</p>
+                    <p className="text-foreground">{restaurantInfo.address}</p>
                   </div>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Hours</h4>
-                    <ul className="text-textDark">
+                    <ul className="text-foreground">
                       <li className="mb-1">Monday - Thursday: {restaurantInfo.hours.monday}</li>
                       <li className="mb-1">Friday - Saturday: {restaurantInfo.hours.friday}</li>
                       <li>Sunday: {restaurantInfo.hours.sunday}</li>
