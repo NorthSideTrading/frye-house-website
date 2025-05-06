@@ -169,7 +169,7 @@ export default function Home() {
         {/* Call to Action */}
         <div className="bg-primary text-white text-center py-12 px-6 rounded-xl mt-20 mb-8">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Experience the Taste of Maine Today</h3>
-          <p className="mb-8 max-w-2xl mx-auto">Join us for a meal at Frye House and discover why we've been a favorite in Farmingdale for generations.</p>
+          <p className="mb-8 max-w-2xl mx-auto">Join us for a meal at Frye House and discover why we've become a favorite in Farmingdale since 2017.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-white text-primary hover:bg-amber-100 font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md">

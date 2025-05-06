@@ -32,7 +32,7 @@ export default function Footer() {
                 <h3 className="ml-3 text-xl font-heading font-bold">Frye House</h3>
               </div>
               <p className="text-white/80 text-sm mb-4">
-                Serving authentic Maine cuisine in a warm and friendly atmosphere since 2010.
+                Serving authentic Maine cuisine in a warm and friendly atmosphere since 2017.
               </p>
               <div className="flex space-x-3 mt-4">
                 <a 
