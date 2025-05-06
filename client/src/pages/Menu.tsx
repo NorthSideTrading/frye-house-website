@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useMenuTabs } from '@/hooks/use-menu-tabs';
 import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, drinks } from '@/lib/data';
+import { Input } from '@/components/ui/input';
+import { Search, X } from 'lucide-react';
 import burgerImage from '@/assets/frye-burger.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
 import sandwichImage from '@/assets/frye-sandwich-new.jpg';
@@ -15,13 +18,91 @@ import type { MenuItem } from '../lib/types';
 
 export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  // Combine all menu items for searching
+  const allMenuItems = [
+    ...dinnerBaskets.map(item => ({ ...item, category: 'dinnerBaskets' })),
+    ...snacks.map(item => ({ ...item, category: 'snacks' })),
+    ...pints.map(item => ({ ...item, category: 'pints' })),
+    ...specialties.map(item => ({ ...item, category: 'specialties' })),
+    ...soups.map(item => ({ ...item, category: 'soups' })),
+    ...sandwiches.map(item => ({ ...item, category: 'sandwiches' })),
+    ...sides.map(item => ({ ...item, category: 'sides' })),
+    ...drinks.map(item => ({ ...item, category: 'drinks' }))
+  ];
+  
+  // Filter menu items based on search query
+  const filteredItems = searchQuery 
+    ? allMenuItems.filter(item => 
+        item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+        item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
 
   return (
     <section className="py-12 md:py-20 bg-white bg-pattern-section">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6 text-center">
           Our Menu
         </h2>
+        
+        {/* Search Bar */}
+        <div className="max-w-md mx-auto mb-10">
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
+            <Input
+              type="text"
+              placeholder="Search menu items..."
+              className="pl-10 pr-10 py-2 border-accent/30 focus:border-accent focus:ring-accent"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button 
+                className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                onClick={() => setSearchQuery('')}
+              >
+                <X className="h-5 w-5 text-gray-400 hover:text-primary" />
+              </button>
+            )}
+          </div>
+        </div>
+        
+        {/* Search Results */}
+        {searchQuery && (
+          <div className="mb-12">
+            <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
+              Search Results ({filteredItems.length} {filteredItems.length === 1 ? 'item' : 'items'} found)
+            </h3>
+            
+            {filteredItems.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {filteredItems.map((item, index) => (
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
+                        <p className="text-xs text-gray-500 mt-2">
+                          Category: {item.category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                        </p>
+                      </div>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-8 bg-background rounded-lg">
+                <p className="text-gray-500">No menu items found matching "{searchQuery}"</p>
+                <p className="text-gray-500 text-sm mt-2">Try a different search term or browse by category below</p>
+              </div>
+            )}
+          </div>
+        )}
         
         {/* Menu Categories Tabs */}
         <div className="mb-10 flex flex-wrap justify-center gap-3 md:gap-6">
@@ -124,6 +205,9 @@ export default function Menu() {
         
         {/* Menu Content */}
         <div className="menu-content">
+          {/* Only show menu categories when not searching */}
+          {!searchQuery && (
+          <>
           {/* Dinner Baskets Section */}
           {isActive('dinnerBaskets') && (
             <div className="menu-category">
@@ -354,6 +438,8 @@ export default function Menu() {
                 ))}
               </div>
             </div>
+          )}
+          </>
           )}
         </div>
       </div>
