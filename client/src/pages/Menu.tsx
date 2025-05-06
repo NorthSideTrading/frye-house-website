@@ -9,6 +9,7 @@ import snacksImage from '@/assets/frye-snacks.jpg';
 import pintsImage from '@/assets/frye-pints.jpg';
 import specialtiesImage from '@/assets/frye-specialties.jpg';
 import sidesImage from '@/assets/frye-sides.jpg';
+import soupsImage from '@/assets/frye-soups.jpg';
 import type { MenuItem } from '../lib/types';
 
 export default function Menu() {
@@ -243,7 +244,7 @@ export default function Menu() {
             <div className="menu-category">
               <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
                 <div className="md:w-1/3">
-                  <img src={seafoodImage} alt="Frye House Soups" className="rounded-lg shadow-lg w-full h-auto" />
+                  <img src={soupsImage} alt="Frye House Soups" className="rounded-lg shadow-lg w-full h-auto" />
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Soups & Stews</h3>
