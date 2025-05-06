@@ -241,8 +241,8 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src="/images/menu/chicken-fries-snacks.jpg" 
-                          alt="Frye House Snacks" 
+                          src="/images/menu/nuggets-fries.jpg" 
+                          alt="Frye House Chicken Nuggets and Fries" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
