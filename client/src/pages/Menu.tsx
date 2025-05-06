@@ -1,9 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { useMenuTabs } from '@/hooks/use-menu-tabs';
-import { burgers, seafood, sandwiches, sides } from '@/lib/data';
+import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, drinks } from '@/lib/data';
 import burgerImage from '@/assets/frye-burger.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
 import sandwichImage from '@/assets/frye-sandwich.jpg';
+import { MenuItem } from '@/lib/types';
 
 export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
@@ -18,27 +19,63 @@ export default function Menu() {
         {/* Menu Categories Tabs */}
         <div className="mb-10 flex flex-wrap justify-center gap-3 md:gap-6">
           <Button
-            variant={isActive('burgers') ? "default" : "secondary"}
+            variant={isActive('dinnerBaskets') ? "default" : "secondary"}
             className={`rounded-full font-semibold ${
-              isActive('burgers') 
+              isActive('dinnerBaskets') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
                 : 'bg-secondary hover:bg-accent hover:text-white text-primary'
             }`}
-            onClick={() => changeCategory('burgers')}
+            onClick={() => changeCategory('dinnerBaskets')}
           >
-            Burgers
+            Dinner Baskets
           </Button>
           
           <Button
-            variant={isActive('seafood') ? "default" : "secondary"}
+            variant={isActive('snacks') ? "default" : "secondary"}
             className={`rounded-full font-semibold ${
-              isActive('seafood') 
+              isActive('snacks') 
                 ? 'bg-accent hover:bg-accent/90 text-white' 
                 : 'bg-secondary hover:bg-accent hover:text-white text-primary'
             }`}
-            onClick={() => changeCategory('seafood')}
+            onClick={() => changeCategory('snacks')}
           >
-            Seafood
+            Snacks
+          </Button>
+
+          <Button
+            variant={isActive('pints') ? "default" : "secondary"}
+            className={`rounded-full font-semibold ${
+              isActive('pints') 
+                ? 'bg-accent hover:bg-accent/90 text-white' 
+                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+            }`}
+            onClick={() => changeCategory('pints')}
+          >
+            Pints
+          </Button>
+          
+          <Button
+            variant={isActive('specialties') ? "default" : "secondary"}
+            className={`rounded-full font-semibold ${
+              isActive('specialties') 
+                ? 'bg-accent hover:bg-accent/90 text-white' 
+                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+            }`}
+            onClick={() => changeCategory('specialties')}
+          >
+            Specialties
+          </Button>
+          
+          <Button
+            variant={isActive('soups') ? "default" : "secondary"}
+            className={`rounded-full font-semibold ${
+              isActive('soups') 
+                ? 'bg-accent hover:bg-accent/90 text-white' 
+                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+            }`}
+            onClick={() => changeCategory('soups')}
+          >
+            Soups
           </Button>
           
           <Button
@@ -64,32 +101,44 @@ export default function Menu() {
           >
             Sides
           </Button>
+          
+          <Button
+            variant={isActive('drinks') ? "default" : "secondary"}
+            className={`rounded-full font-semibold ${
+              isActive('drinks') 
+                ? 'bg-accent hover:bg-accent/90 text-white' 
+                : 'bg-secondary hover:bg-accent hover:text-white text-primary'
+            }`}
+            onClick={() => changeCategory('drinks')}
+          >
+            Drinks
+          </Button>
         </div>
         
         {/* Menu Content */}
         <div className="menu-content">
-          {/* Burgers Section */}
-          {isActive('burgers') && (
+          {/* Dinner Baskets Section */}
+          {isActive('dinnerBaskets') && (
             <div className="menu-category">
               <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
                 <div className="md:w-1/3">
-                  <img src={burgerImage} alt="Frye House Burgers" className="rounded-lg shadow-lg w-full h-auto" />
+                  <img src={seafoodImage} alt="Frye House Dinner Baskets" className="rounded-lg shadow-lg w-full h-auto" />
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Burgers</h3>
-                  <p className="text-foreground">Our signature burgers are made with fresh, locally-sourced ingredients and cooked to perfection. Each burger comes with your choice of fries or house salad.</p>
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Dinner Baskets</h3>
+                  <p className="text-foreground">Our dinner baskets include fries, roll & coleslaw. Upgrade to onion rings for just $2.00 more.</p>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {burgers.map((burger, index) => (
+                {dinnerBaskets.map((item: MenuItem, index: number) => (
                   <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{burger.name}</h4>
-                        <p className="text-foreground mt-2">{burger.description}</p>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{burger.price}</span>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
                     </div>
                   </div>
                 ))}
@@ -97,21 +146,108 @@ export default function Menu() {
             </div>
           )}
           
-          {/* Seafood Section */}
-          {isActive('seafood') && (
+          {/* Snacks Section */}
+          {isActive('snacks') && (
             <div className="menu-category">
               <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
                 <div className="md:w-1/3">
-                  <img src={seafoodImage} alt="Frye House Seafood" className="rounded-lg shadow-lg w-full h-auto" />
+                  <img src={seafoodImage} alt="Frye House Snacks" className="rounded-lg shadow-lg w-full h-auto" />
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Seafood</h3>
-                  <p className="text-foreground">Our fresh seafood is sourced locally whenever possible. We take pride in serving the finest seafood dishes made with traditional recipes and a modern twist.</p>
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Snacks</h3>
+                  <p className="text-foreground">Our snack options come with fries. Upgrade to onion rings for just $1.00 more.</p>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {seafood.map((item, index) => (
+                {snacks.map((item: MenuItem, index: number) => (
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
+                      </div>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Pints Section */}
+          {isActive('pints') && (
+            <div className="menu-category">
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={seafoodImage} alt="Frye House Pints" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Pints</h3>
+                  <p className="text-foreground">Generous pint-sized servings of our delicious fried foods.</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {pints.map((item: MenuItem, index: number) => (
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
+                      </div>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Specialties Section */}
+          {isActive('specialties') && (
+            <div className="menu-category">
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={seafoodImage} alt="Frye House Specialties" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Specialties</h3>
+                  <p className="text-foreground">Try our specialties including the Family Meal, wings, and our famous lobster rolls.</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {specialties.map((item: MenuItem, index: number) => (
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
+                      </div>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Soups Section */}
+          {isActive('soups') && (
+            <div className="menu-category">
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={seafoodImage} alt="Frye House Soups" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Soups & Stews</h3>
+                  <p className="text-foreground">Our hearty soups and stews are the perfect way to warm up on a cool day or add to your meal.</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {soups.map((item: MenuItem, index: number) => (
                   <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
@@ -135,19 +271,19 @@ export default function Menu() {
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sandwiches</h3>
-                  <p className="text-foreground">Our sandwiches are made with freshly baked bread and premium ingredients. Each sandwich is served with your choice of fries, chips, or house salad.</p>
+                  <p className="text-foreground">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries or onion rings to make it a meal.</p>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {sandwiches.map((sandwich, index) => (
+                {sandwiches.map((item: MenuItem, index: number) => (
                   <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{sandwich.name}</h4>
-                        <p className="text-foreground mt-2">{sandwich.description}</p>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{sandwich.price}</span>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
                     </div>
                   </div>
                 ))}
@@ -164,19 +300,48 @@ export default function Menu() {
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Sides</h3>
-                  <p className="text-foreground">Complete your meal with our selection of delicious sides. From crispy fries to fresh salads, we have the perfect complement to your main dish.</p>
+                  <p className="text-foreground">Complete your meal with our selection of delicious sides. From onion rings to fried pickles, we have the perfect complement to your main dish.</p>
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {sides.map((side, index) => (
+                {sides.map((item: MenuItem, index: number) => (
                   <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{side.name}</h4>
-                        <p className="text-foreground mt-2">{side.description}</p>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
                       </div>
-                      <span className="text-accent font-semibold ml-4">{side.price}</span>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Drinks Section */}
+          {isActive('drinks') && (
+            <div className="menu-category">
+              <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
+                <div className="md:w-1/3">
+                  <img src={burgerImage} alt="Frye House Drinks" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Drinks</h3>
+                  <p className="text-foreground">Quench your thirst with our selection of refreshing beverages and delicious milkshakes.</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {drinks.map((item: MenuItem, index: number) => (
+                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
+                        <p className="text-foreground mt-2">{item.description}</p>
+                      </div>
+                      <span className="text-accent font-semibold ml-4">{item.price}</span>
                     </div>
                   </div>
                 ))}

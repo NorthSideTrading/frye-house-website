@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-type MenuCategory = 'burgers' | 'seafood' | 'sandwiches' | 'sides';
+type MenuCategory = 'dinnerBaskets' | 'snacks' | 'pints' | 'specialties' | 'soups' | 'sandwiches' | 'sides' | 'drinks';
 
-export function useMenuTabs(defaultCategory: MenuCategory = 'burgers') {
+export function useMenuTabs(defaultCategory: MenuCategory = 'dinnerBaskets') {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>(defaultCategory);
 
   const changeCategory = (category: MenuCategory) => {

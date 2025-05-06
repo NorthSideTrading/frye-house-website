@@ -1,100 +1,338 @@
 // Menu Item Types
-interface MenuItem {
-  name: string;
-  description: string;
-  price: string;
-}
+import { MenuItem } from './types';
 
 // Menu Data
-export const burgers: MenuItem[] = [
+export const dinnerBaskets: MenuItem[] = [
   {
-    name: "Classic Cheeseburger",
-    description: "Juicy beef patty with American cheese, lettuce, tomato, and special sauce on a brioche bun.",
-    price: "$12.99"
+    name: "Chicken Dinner Basket",
+    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$13.50"
   },
   {
-    name: "Bacon Bleu Burger",
-    description: "Beef patty topped with crispy bacon, bleu cheese, caramelized onions, and garlic aioli.",
-    price: "$14.99"
+    name: "Haddock Dinner Basket",
+    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$14.95"
   },
   {
-    name: "Mushroom Swiss Burger",
-    description: "Beef patty with sautéed mushrooms, Swiss cheese, and truffle mayo on a toasted bun.",
-    price: "$13.99"
+    name: "Scallops Dinner Basket",
+    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$19.50"
   },
   {
-    name: "BBQ Burger",
-    description: "Beef patty with house BBQ sauce, cheddar cheese, fried onion rings, and coleslaw.",
-    price: "$14.99"
+    name: "Shrimp Dinner Basket",
+    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$19.50"
+  },
+  {
+    name: "Clam Dinner Basket",
+    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$21.95"
+  },
+  {
+    name: "Mixed Sea Dinner Basket",
+    description: "Haddock, shrimp, clams & scallops. Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$21.95"
+  },
+  {
+    name: "Pork Tenderloin Dinner Basket",
+    description: "Includes: Fries, Roll & Coleslaw. With Onion Rings Add $2.00",
+    price: "$13.50"
   }
 ];
 
-export const seafood: MenuItem[] = [
+export const snacks: MenuItem[] = [
   {
-    name: "Maine Lobster Roll",
-    description: "Fresh Maine lobster meat lightly dressed with mayo on a toasted New England roll.",
-    price: "$Market"
+    name: "Chicken Snack",
+    description: "With Fries. With Onion Rings Add $1.00",
+    price: "$9.95"
   },
   {
-    name: "Fried Haddock Basket",
-    description: "Crispy beer-battered haddock served with fries, coleslaw, and tartar sauce.",
-    price: "$16.99"
+    name: "Haddock Snack",
+    description: "With Fries. With Onion Rings Add $1.00",
+    price: "$11.95"
   },
   {
-    name: "Clam Strips",
-    description: "Tender fried clam strips served with house tartar sauce and lemon wedge.",
-    price: "$12.99"
+    name: "Scallops Snack",
+    description: "With Fries. With Onion Rings Add $1.00",
+    price: "$16.50"
   },
   {
-    name: "Seafood Chowder",
-    description: "Creamy New England-style chowder with haddock, clams, and potatoes.",
-    price: "$8.99"
+    name: "Shrimp Snack",
+    description: "With Fries. With Onion Rings Add $1.00",
+    price: "$13.95"
+  },
+  {
+    name: "Clams Snack",
+    description: "With Fries. With Onion Rings Add $1.00",
+    price: "$17.50"
+  },
+  {
+    name: "Mixed Sea Snack",
+    description: "Haddock, shrimp, clams & scallops. With Fries. With Onion Rings Add $1.00",
+    price: "$16.95"
+  },
+  {
+    name: "Pork Snack",
+    description: "With Fries. With Onion Rings Add $1.00",
+    price: "$9.95"
+  }
+];
+
+export const pints: MenuItem[] = [
+  {
+    name: "Chicken Pint",
+    description: "Fresh fried chicken by the pint",
+    price: "$12.95"
+  },
+  {
+    name: "Haddock Pint",
+    description: "Fresh fried haddock by the pint",
+    price: "$14.50"
+  },
+  {
+    name: "Scallops Pint",
+    description: "Fresh fried scallops by the pint",
+    price: "$19.50"
+  },
+  {
+    name: "Shrimp Pint",
+    description: "Fresh fried shrimp by the pint",
+    price: "$16.50"
+  },
+  {
+    name: "Clam Pint",
+    description: "Fresh fried clams by the pint",
+    price: "$20.95"
+  },
+  {
+    name: "Mixed Sea Pint",
+    description: "Haddock, shrimp, clams & scallops by the pint",
+    price: "$18.95"
+  },
+  {
+    name: "Pork Tenderloin Pint",
+    description: "Fresh fried pork tenderloin by the pint",
+    price: "$12.95"
+  }
+];
+
+export const specialties: MenuItem[] = [
+  {
+    name: "Family Meal",
+    description: "Includes: 2 Pints of Chicken, Fries, coleslaw, dinner rolls, and 2 Liter of Soda. Sub Onion Rings for $3.00. Feeds Four",
+    price: "$26.95"
+  },
+  {
+    name: "Wings",
+    description: "Blazin Hot, Mild, BBQ, Teriyaki, Sweet Thai Chili, Nashville, or Salt & Vinegar. Served with Celery & Carrots, Blue Cheese or Ranch",
+    price: "$10.99"
+  },
+  {
+    name: "1/4 lb Lobster Roll",
+    description: "Fresh Maine lobster on a toasted roll",
+    price: "$16.95"
+  },
+  {
+    name: "1/2 lb Lobster Roll",
+    description: "Double-sized fresh Maine lobster on a toasted roll",
+    price: "$29.95"
+  }
+];
+
+export const soups: MenuItem[] = [
+  {
+    name: "Seafood Stew Cup",
+    description: "Our signature seafood stew in a cup",
+    price: "$7.95"
+  },
+  {
+    name: "Seafood Stew Bowl",
+    description: "Our signature seafood stew in a bowl",
+    price: "$11.50"
+  },
+  {
+    name: "Seafood Stew Quart",
+    description: "Our signature seafood stew in a quart container",
+    price: "$22.95"
+  },
+  {
+    name: "Soup of the Day Cup",
+    description: "Ask about our daily soup special",
+    price: "$3.95"
+  },
+  {
+    name: "Soup of the Day Bowl",
+    description: "Ask about our daily soup special",
+    price: "$5.50"
   }
 ];
 
 export const sandwiches: MenuItem[] = [
   {
-    name: "Classic Club",
-    description: "Turkey, bacon, lettuce, tomato, and mayo on toasted white bread.",
-    price: "$11.99"
+    name: "Hamburger Single",
+    description: "Classic hamburger, add toppings as desired",
+    price: "$4.95"
   },
   {
-    name: "Grilled Chicken",
-    description: "Grilled chicken breast with lettuce, tomato, and honey mustard on a ciabatta roll.",
-    price: "$12.99"
+    name: "Cheeseburger Single",
+    description: "Classic cheeseburger, add toppings as desired",
+    price: "$5.50"
   },
   {
-    name: "BLT",
-    description: "Crispy bacon, lettuce, tomato, and mayo on toasted bread of your choice.",
-    price: "$9.99"
+    name: "Fried or Grilled Haddock",
+    description: "Fresh haddock filet, prepared fried or grilled to your preference",
+    price: "$8.95"
   },
   {
-    name: "Reuben",
-    description: "Corned beef, Swiss cheese, sauerkraut, and Russian dressing on grilled rye bread.",
-    price: "$13.99"
+    name: "House Fried Chicken",
+    description: "Our signature fried chicken on a bun",
+    price: "$7.95"
+  },
+  {
+    name: "Fried or Grilled Chicken Breast",
+    description: "Chicken breast, prepared fried or grilled to your preference",
+    price: "$8.50"
+  },
+  {
+    name: "B.L.T.",
+    description: "Classic bacon, lettuce, and tomato sandwich",
+    price: "$7.95"
+  },
+  {
+    name: "Hot Dog",
+    description: "Classic all-beef hot dog",
+    price: "$2.95"
+  },
+  {
+    name: "Grilled Cheese",
+    description: "Melted American cheese on grilled bread",
+    price: "$3.95"
+  },
+  {
+    name: "Philly Cheese Steak",
+    description: "Thinly sliced steak with melted cheese and grilled peppers and onions",
+    price: "$10.95"
+  },
+  {
+    name: "Clam Roll",
+    description: "Fried clams on a toasted roll",
+    price: "$9.50"
+  },
+  {
+    name: "Shrimp Roll",
+    description: "Fried shrimp on a toasted roll",
+    price: "$8.95"
+  },
+  {
+    name: "Chicken Parmesan",
+    description: "Fried chicken topped with marinara and melted cheese",
+    price: "$8.50"
+  },
+  {
+    name: "BBQ Pulled Pork",
+    description: "Slow-cooked pulled pork with BBQ sauce on a bun",
+    price: "$7.95"
   }
 ];
 
 export const sides: MenuItem[] = [
   {
-    name: "French Fries",
-    description: "Crispy golden fries seasoned with our house blend.",
-    price: "$4.99"
+    name: "Onion Rings Small",
+    description: "Golden fried onion rings",
+    price: "$3.25"
   },
   {
-    name: "Onion Rings",
-    description: "Beer-battered onion rings fried to golden perfection.",
-    price: "$5.99"
+    name: "Onion Rings Large",
+    description: "Golden fried onion rings",
+    price: "$5.95"
   },
   {
-    name: "Coleslaw",
-    description: "House-made creamy coleslaw with a sweet and tangy dressing.",
-    price: "$3.99"
+    name: "French Fries Small",
+    description: "Crispy golden fries",
+    price: "$3.50"
   },
   {
-    name: "Side Salad",
-    description: "Fresh mixed greens with cucumber, tomato, and choice of dressing.",
-    price: "$4.99"
+    name: "French Fries Large",
+    description: "Crispy golden fries",
+    price: "$5.50"
+  },
+  {
+    name: "Mushrooms Small",
+    description: "Battered and fried mushrooms",
+    price: "$4.25"
+  },
+  {
+    name: "Mushrooms Large",
+    description: "Battered and fried mushrooms",
+    price: "$6.95"
+  },
+  {
+    name: "Veggie Plate Small",
+    description: "Assorted fried vegetables",
+    price: "$4.95"
+  },
+  {
+    name: "Veggie Plate Large",
+    description: "Assorted fried vegetables",
+    price: "$7.95"
+  },
+  {
+    name: "Mozzarella Sticks",
+    description: "Breaded and fried mozzarella cheese sticks",
+    price: "$7.50"
+  },
+  {
+    name: "Fried Pickles",
+    description: "Battered and fried dill pickle spears",
+    price: "$5.50"
+  },
+  {
+    name: "Coleslaw Small",
+    description: "House-made creamy coleslaw",
+    price: "$0.75"
+  },
+  {
+    name: "Coleslaw Medium",
+    description: "House-made creamy coleslaw",
+    price: "$1.95"
+  },
+  {
+    name: "Coleslaw Large",
+    description: "House-made creamy coleslaw",
+    price: "$2.95"
+  },
+  {
+    name: "Gravy",
+    description: "House gravy for dipping",
+    price: "$0.95"
+  }
+];
+
+export const drinks: MenuItem[] = [
+  {
+    name: "Soft Drink Small",
+    description: "Pepsi, Diet Pepsi, Ginger Ale, Mt. Dew, Brisk Tea, Pink Lemonade",
+    price: "$1.95"
+  },
+  {
+    name: "Soft Drink Large",
+    description: "Pepsi, Diet Pepsi, Ginger Ale, Mt. Dew, Brisk Tea, Pink Lemonade",
+    price: "$2.95"
+  },
+  {
+    name: "Coffee/Tea",
+    description: "Hot coffee or tea",
+    price: "varies"
+  },
+  {
+    name: "Bottled Drinks",
+    description: "Various bottled beverages",
+    price: "varies"
+  },
+  {
+    name: "Milkshake",
+    description: "Vanilla, Chocolate, Coffee, Peanut Butter, Blackberry, Banana, or Strawberry",
+    price: "$3.95"
   }
 ];
 
