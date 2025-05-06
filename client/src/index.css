@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 39 100% 97%;
+    --background: 39 100% 98%;
     --foreground: 20 14.3% 23%;
     
     --muted: 39 30% 92%;
@@ -44,11 +44,115 @@
 
   body {
     font-family: 'Open Sans', sans-serif;
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
+    background-color: hsl(var(--background));
+    background-image: 
+      radial-gradient(circle at 20% 35%, rgba(255, 140, 0, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 44%, rgba(139, 69, 19, 0.04) 0%, transparent 40%),
+      linear-gradient(to bottom, rgba(255, 248, 240, 0.5) 0%, transparent 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+    z-index: 100;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+  }
+  
+  section {
+    position: relative;
+  }
+}
+
+@layer components {
+  .page-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page-container::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(245, 222, 179, 0.2) 0%, transparent 70%);
+    top: -150px;
+    right: -150px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .page-container::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(139, 69, 19, 0.1) 0%, transparent 70%);
+    bottom: 5%;
+    left: -100px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .card-hover-effect {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold text-primary mb-6 relative;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70%;
+    height: 3px;
+    @apply bg-accent;
+  }
+  
+  .subtle-accent-border {
+    border-left: 3px solid hsl(var(--accent) / 40%);
+    padding-left: 1rem;
+  }
+  
+  .decorated-box {
+    position: relative;
+  }
+  
+  .decorated-box::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: 3px solid hsl(var(--accent));
+    border-left: 3px solid hsl(var(--accent));
+    top: -5px;
+    left: -5px;
+  }
+  
+  .decorated-box::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid hsl(var(--accent));
+    border-right: 3px solid hsl(var(--accent));
+    bottom: -5px;
+    right: -5px;
   }
 }
 
@@ -64,5 +168,23 @@
     width: 60px;
     height: 3px;
     @apply bg-accent;
+  }
+  
+  .bg-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0e0c0' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .bg-dots {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4a76a' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsl(var(--primary) / 20%), transparent);
+    margin: 3rem 0;
   }
 }

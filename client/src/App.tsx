@@ -13,15 +13,21 @@ import Gallery from "@/pages/Gallery";
 
 function Router() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col page-container bg-dots">
       <Navbar />
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/menu" component={Menu} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/gallery" component={Gallery} />
-        <Route component={NotFound} />
-      </Switch>
+      <main className="flex-grow relative">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-0 w-24 h-24 bg-amber-100/20 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-40 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+        
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/menu" component={Menu} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/gallery" component={Gallery} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
       <Footer />
     </div>
   );
