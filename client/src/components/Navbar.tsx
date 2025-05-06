@@ -47,14 +47,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center group">
             <div className="flex flex-col">
-              <div className={`transition-all duration-300 ${
+              <div className={`transition-all duration-300 flex items-center ${
                 scrolled ? 'h-8' : 'h-10'
               }`}>
-                <img 
-                  src={fryeHouseTextLogo} 
-                  alt="FRYE⚓HOUSE" 
-                  className="h-full w-auto object-contain transition-all duration-300 filter brightness-[0.05] drop-shadow-sm hover:drop-shadow-md"
-                />
+                <h1 className="text-xl md:text-2xl font-black tracking-wide transition-all duration-300">
+                  FRYE<span className="inline-block mx-0.5 transform translate-y-0.5">⚓</span>HOUSE
+                </h1>
               </div>
               <span className="text-xs text-primary/70 mt-0.5 tracking-wider font-light">Farmingdale, Maine</span>
             </div>
