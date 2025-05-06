@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
+import fryeHouseLogo from '@/assets/frye-house-logo.jpg';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,17 +20,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-primary text-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3">
+    <nav className="bg-white text-primary shadow-md sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-heading font-bold">
-            Frye House
+          <Link href="/" className="flex items-center">
+            <img 
+              src={fryeHouseLogo} 
+              alt="Frye House Logo" 
+              className="h-14 w-auto mr-2"
+            />
           </Link>
           
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-primary focus:outline-none"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (

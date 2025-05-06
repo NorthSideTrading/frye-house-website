@@ -2,10 +2,10 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Utensils, Fish, Beef } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
-import restaurantImage from '@/assets/restaurant-interior.jpg';
-import burgerImage from '@/assets/burger.jpg';
-import friedChickenImage from '@/assets/fried-chicken.jpg';
-import seafoodImage from '@/assets/seafood.jpg';
+import restaurantImage from '@/assets/frye-interior.jpg';
+import burgerImage from '@/assets/frye-burger.jpg';
+import friedChickenImage from '@/assets/frye-sandwich.jpg';
+import seafoodImage from '@/assets/frye-seafood.jpg';
 
 export default function Home() {
   return (
