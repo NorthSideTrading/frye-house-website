@@ -268,8 +268,8 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src="/images/menu/pints.jpg" 
-                          alt="Frye House Pints" 
+                          src="/images/menu/pint-seafood.jpg" 
+                          alt="Frye House Fried Seafood Pint with Tartar Sauce" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
