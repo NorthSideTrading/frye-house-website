@@ -224,7 +224,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={dinnerBasketImage} 
+                          src="/images/menu/dinner-basket.jpg" 
                           alt="Frye House Dinner Baskets" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
@@ -251,7 +251,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={snacksImage} 
+                          src="/images/menu/fish-and-chips.jpg" 
                           alt="Frye House Snacks" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
@@ -305,7 +305,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={specialtiesImage} 
+                          src="/images/menu/specialties-collage.jpg" 
                           alt="Frye House Specialties" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
@@ -332,7 +332,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={soupsImage} 
+                          src="/images/menu/soups.jpg" 
                           alt="Frye House Soups" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
@@ -359,7 +359,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={sandwichImage} 
+                          src="/images/menu/sandwiches.jpg" 
                           alt="Frye House Sandwiches" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
@@ -386,7 +386,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={sidesImage} 
+                          src="/images/menu/sides.jpg" 
                           alt="Frye House Sides" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
