@@ -14,44 +14,46 @@ export default function Home() {
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl shadow-2xl overflow-hidden mb-20">
-          <div className="flex flex-col md:flex-row items-center p-8 md:p-12">
-            <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
-              <div className="mb-8 flex justify-center md:justify-start">
-                <img 
-                  src={fryeHouseLogo} 
-                  alt="Frye House Logo"
-                  className="h-32 w-auto rounded-full shadow-lg border-4 border-white" 
-                />
+          <div className="relative p-8 md:p-12">
+            {/* Hero content with single logo */}
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-3/5 mb-10 md:mb-0 md:pr-8">
+                <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6 text-center md:text-left">
+                  Authentic Maine Cuisine
+                </h1>
+                <p className="text-lg mb-8 text-foreground leading-relaxed">
+                  Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
+                  We're passionate about serving quality food made with locally-sourced ingredients that brings people together.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
+                  <Link href="/menu">
+                    <Button className="bg-accent hover:bg-primary text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
+                      View Our Menu
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
+                      Find Us
+                    </Button>
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6 text-center md:text-left">
-                Authentic Maine Cuisine
-              </h1>
-              <p className="text-lg mb-8 text-foreground leading-relaxed">
-                Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
-                We're passionate about serving quality food made with locally-sourced ingredients that brings people together.
-              </p>
               
-              <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
-                <Link href="/menu">
-                  <Button className="bg-accent hover:bg-primary text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
-                    View Our Menu
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
-                    Find Us
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            
-            <div className="md:w-1/2 flex justify-center items-center">
-              <div className="bg-amber-50 rounded-full p-8 shadow-xl border-8 border-amber-100/50 transform hover:rotate-3 transition duration-700">
-                <img 
-                  src={fryeHouseLogo} 
-                  alt="Frye House Logo" 
-                  className="w-full max-w-sm h-auto object-contain"
-                />
+              <div className="md:w-2/5 flex justify-center items-center md:justify-end">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-amber-200/20 rounded-full blur-xl transform scale-110"></div>
+                  <div className="relative bg-white rounded-full p-5 shadow-lg border-4 border-amber-100/50">
+                    <img 
+                      src={fryeHouseLogo} 
+                      alt="Frye House Logo" 
+                      className="w-64 h-auto"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 text-center text-primary/70 text-sm font-medium pb-2">
+                      EST. 2010
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

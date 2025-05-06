@@ -45,21 +45,10 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <div className={`overflow-hidden rounded-full transition-all duration-300 ${
-              scrolled ? 'h-12 w-12' : 'h-16 w-16'
-            }`}>
-              <img 
-                src={fryeHouseLogo} 
-                alt="Frye House Logo" 
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="ml-3">
-              <span className={`font-heading font-bold transition-all duration-300 ${
-                scrolled ? 'text-xl' : 'text-2xl'
-              } text-primary`}>Frye House</span>
-              <span className="block text-xs text-primary/70">Farmingdale, Maine</span>
-            </div>
+            <span className={`font-heading font-bold transition-all duration-300 ${
+              scrolled ? 'text-xl' : 'text-2xl'
+            } text-primary`}>Frye House</span>
+            <span className="block text-xs text-primary/70 ml-1">Farmingdale, Maine</span>
           </Link>
           
           {/* Mobile Menu Button */}
