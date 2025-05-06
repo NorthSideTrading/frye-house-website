@@ -60,7 +60,7 @@ export default function Home() {
               <Beef className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-heading font-semibold mb-3">Signature Burgers</h3>
-            <p className="text-textDark">
+            <p className="text-foreground">
               Try our famous burgers with a variety of toppings and house special sauces.
             </p>
           </div>
