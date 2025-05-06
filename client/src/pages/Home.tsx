@@ -45,12 +45,14 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="md:w-1/2">
-              <img 
-                src={restaurantImage} 
-                alt="Frye House Restaurant Interior" 
-                className="rounded-lg shadow-xl w-full h-auto object-cover transform hover:scale-105 transition duration-700"
-              />
+            <div className="md:w-1/2 flex justify-center items-center">
+              <div className="bg-amber-50 rounded-full p-8 shadow-xl border-8 border-amber-100/50 transform hover:rotate-3 transition duration-700">
+                <img 
+                  src={fryeHouseLogo} 
+                  alt="Frye House Logo" 
+                  className="w-full max-w-sm h-auto object-contain"
+                />
+              </div>
             </div>
           </div>
           
