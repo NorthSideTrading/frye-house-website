@@ -3,7 +3,7 @@ import { useMenuTabs } from '@/hooks/use-menu-tabs';
 import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, drinks } from '@/lib/data';
 import burgerImage from '@/assets/frye-burger.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
-import sandwichImage from '@/assets/frye-sandwich.jpg';
+import sandwichImage from '@/assets/frye-sandwich-new.jpg';
 import dinnerBasketImage from '@/assets/frye-dinner-basket.jpg';
 import snacksImage from '@/assets/frye-snacks.jpg';
 import pintsImage from '@/assets/frye-pints.jpg';
