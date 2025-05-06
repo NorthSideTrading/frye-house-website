@@ -181,6 +181,11 @@ export default function Home() {
                 View Full Menu
               </Button>
             </Link>
+            <Link href="/contact">
+              <Button className="bg-secondary hover:bg-secondary/80 text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
