@@ -4,6 +4,7 @@ import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, dr
 import burgerImage from '@/assets/frye-burger.jpg';
 import seafoodImage from '@/assets/frye-seafood.jpg';
 import sandwichImage from '@/assets/frye-sandwich.jpg';
+import dinnerBasketImage from '@/assets/frye-dinner-basket.jpg';
 import type { MenuItem } from '../lib/types';
 
 export default function Menu() {
@@ -122,7 +123,7 @@ export default function Menu() {
             <div className="menu-category">
               <div className="flex flex-col md:flex-row items-center gap-6 mb-10">
                 <div className="md:w-1/3">
-                  <img src={seafoodImage} alt="Frye House Dinner Baskets" className="rounded-lg shadow-lg w-full h-auto" />
+                  <img src={dinnerBasketImage} alt="Frye House Dinner Baskets" className="rounded-lg shadow-lg w-full h-auto" />
                 </div>
                 <div className="md:w-2/3">
                   <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Dinner Baskets</h3>
