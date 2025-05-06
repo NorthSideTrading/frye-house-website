@@ -4,16 +4,6 @@ import { useMenuTabs } from '@/hooks/use-menu-tabs';
 import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, drinks } from '@/lib/data';
 import { Input } from '@/components/ui/input';
 import { Search, X } from 'lucide-react';
-import burgerImage from '@/assets/frye-burger.jpg';
-import seafoodImage from '@/assets/frye-seafood.jpg';
-import sandwichImage from '@/assets/frye-sandwich-new.jpg';
-import dinnerBasketImage from '@/assets/frye-dinner-basket.jpg';
-import snacksImage from '@/assets/frye-snacks.jpg';
-import pintsImage from '@/assets/frye-pints.jpg';
-import specialtiesImage from '@/assets/frye-specialties.jpg';
-import sidesImage from '@/assets/frye-sides.jpg';
-import soupsImage from '@/assets/frye-soups.jpg';
-import drinksImage from '@/assets/frye-drinks.jpg';
 import type { MenuItem } from '../lib/types';
 
 // Enhanced menu item component for a more stylish display
@@ -278,7 +268,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={pintsImage} 
+                          src="/images/menu/pints.jpg" 
                           alt="Frye House Pints" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
@@ -413,7 +403,7 @@ export default function Menu() {
                     <div className="flex flex-col items-center">
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
-                          src={drinksImage} 
+                          src="/images/menu/drinks.jpg" 
                           alt="Frye House Drinks" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
