@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import fryeHouseLogo from '@/assets/frye-house-logo.jpg';
-import fryeHouseTextLogo from '@/assets/frye-house-text-logo.svg';
+import fryeHouseTextLogo from '@/assets/frye-house-text-logo-new.png';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,12 +48,12 @@ export default function Navbar() {
           <Link href="/" className="flex items-center group">
             <div className="flex flex-col">
               <div className={`transition-all duration-300 ${
-                scrolled ? 'h-9' : 'h-11'
+                scrolled ? 'h-8' : 'h-10'
               }`}>
                 <img 
                   src={fryeHouseTextLogo} 
                   alt="FRYE⚓HOUSE" 
-                  className="h-full w-auto object-contain transition-all duration-300 filter drop-shadow-sm hover:drop-shadow-md"
+                  className="h-full w-auto object-contain transition-all duration-300 filter brightness-[0.05] drop-shadow-sm hover:drop-shadow-md"
                 />
               </div>
               <span className="text-xs text-primary/70 mt-0.5 tracking-wider font-light">Farmingdale, Maine</span>
