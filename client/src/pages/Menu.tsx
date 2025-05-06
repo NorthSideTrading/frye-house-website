@@ -96,17 +96,11 @@ export default function Menu() {
             {filteredItems.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredItems.map((item, index) => (
-                  <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                        <p className="text-foreground mt-2">{item.description}</p>
-                        <p className="text-xs text-gray-500 mt-2">
-                          Category: {item.category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                        </p>
-                      </div>
-                      <span className="text-accent font-semibold ml-4">{item.price}</span>
-                    </div>
+                  <div key={index} className="relative">
+                    <MenuItemCard item={item} />
+                    <p className="absolute bottom-2 right-3 text-xs text-gray-500">
+                      Category: {item.category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -245,15 +239,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {dinnerBaskets.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -281,15 +267,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {snacks.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -317,15 +295,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {pints.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -353,15 +323,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {specialties.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -389,15 +351,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {soups.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -425,15 +379,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {sandwiches.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -461,15 +407,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {sides.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
@@ -497,15 +435,7 @@ export default function Menu() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {drinks.map((item: MenuItem, index: number) => (
-                      <div key={index} className="bg-background p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 border-l-4 border-accent">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xl font-heading font-semibold text-primary">{item.name}</h4>
-                            <p className="text-foreground mt-2">{item.description}</p>
-                          </div>
-                          <span className="text-accent font-semibold ml-4">{item.price}</span>
-                        </div>
-                      </div>
+                      <MenuItemCard key={index} item={item} />
                     ))}
                   </div>
                 </div>
