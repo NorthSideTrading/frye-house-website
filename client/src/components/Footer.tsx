@@ -61,6 +61,7 @@ export default function Footer() {
                 {[
                   { path: '/', label: 'Home' },
                   { path: '/menu', label: 'Menu' },
+                  { path: '/about', label: 'About' },
                   { path: '/gallery', label: 'Gallery' },
                   { path: '/contact', label: 'Contact' }
                 ].map(item => (

@@ -66,7 +66,7 @@ export default function Navbar() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-1">
-            {['/', '/menu', '/gallery', '/contact'].map((path) => {
+            {['/', '/menu', '/about', '/gallery', '/contact'].map((path) => {
               const label = path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2);
               
               return (
@@ -95,7 +95,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-3 pb-2 bg-amber-50/90 backdrop-blur-sm rounded-md p-3 border border-amber-100 shadow-inner">
-            {['/', '/menu', '/gallery', '/contact'].map((path) => {
+            {['/', '/menu', '/about', '/gallery', '/contact'].map((path) => {
               const label = path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2);
               
               return (
