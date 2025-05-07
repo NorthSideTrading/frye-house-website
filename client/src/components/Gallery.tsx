@@ -20,8 +20,6 @@ import image5 from '@/assets/gallery/488026039_1266169921550423_5835455115065433
 import image6 from '@/assets/gallery/488887172_1271694624331286_4920197146466631889_n.jpg';
 import image7 from '@/assets/gallery/488912550_1273650647469017_3620668529530846844_n.jpg';
 import image8 from '@/assets/gallery/489454915_1273694950797920_8102713312156389123_n.jpg';
-import image9 from '@/assets/gallery/482984366_1250764756424273_1979609327465023666_n.jpg';
-import image10 from '@/assets/gallery/484521789_3442368992567026_4377564385774821010_n.jpg';
 import image11 from '@/assets/gallery/486641544_1262356321931783_3794373854376178306_n.jpg';
 import image12 from '@/assets/gallery/486662832_1263300258504056_4195443100909693003_n.jpg';
 import image13 from '@/assets/gallery/487113495_1264438181723597_729783571607825135_n.jpg';
@@ -34,8 +32,8 @@ import image19 from '@/assets/gallery/488066709_1266172994883449_604098724186149
 import image20 from '@/assets/gallery/480526483_1233456451488437_1391924938452794111_n.jpg';
 
 // We've permanently removed these non-food images from the gallery:
-// 1. Frye House Yummy Eats (logo/collage)
-// 2. Family Meal menu (menu board)
+// 1. Frye House Yummy Eats (logo/collage) - 484521789_3442368992567026_4377564385774821010_n.jpg
+// 2. Family Meal menu (menu board) - 482984366_1250764756424273_1979609327465023666_n.jpg
 
 interface ImageInfo {
   src: string;
@@ -108,14 +106,7 @@ const foodImages: ImageInfo[] = [
     src: image8,
     alt: 'Buffalo Chicken Wrap'
   },
-  {
-    src: image9,
-    alt: 'Homemade Pie Slice'
-  },
-  {
-    src: image10,
-    alt: 'Double Cheeseburger'
-  },
+
   {
     src: image11,
     alt: 'Seafood Feast'
