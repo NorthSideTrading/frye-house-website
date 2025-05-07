@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-type MenuCategory = 'dinnerBaskets' | 'snacks' | 'pints' | 'specialties' | 'soups' | 'sandwiches' | 'sides' | 'drinks';
+type MenuCategory = 'overview' | 'dinnerBaskets' | 'snacks' | 'pints' | 'specialties' | 'soups' | 'sandwiches' | 'sides' | 'drinks';
 
-export function useMenuTabs(defaultCategory: MenuCategory = 'dinnerBaskets') {
+export function useMenuTabs(defaultCategory: MenuCategory = 'overview') {
   const [activeCategory, setActiveCategory] = useState<MenuCategory>(defaultCategory);
 
   const changeCategory = (category: MenuCategory) => {

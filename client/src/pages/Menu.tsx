@@ -106,6 +106,18 @@ export default function Menu() {
         {/* Menu Categories Tabs */}
         <div className="mb-10 flex flex-wrap justify-center gap-3 md:gap-6">
           <Button
+            variant={isActive('overview') ? "default" : "secondary"}
+            className={`rounded-full font-semibold ${
+              isActive('overview') 
+                ? 'bg-accent hover:bg-accent/90 text-white' 
+                : 'bg-secondary hover:bg-accent hover:text-white text-white'
+            }`}
+            onClick={() => changeCategory('overview')}
+          >
+            Menu Overview
+          </Button>
+        
+          <Button
             variant={isActive('dinnerBaskets') ? "default" : "secondary"}
             className={`rounded-full font-semibold ${
               isActive('dinnerBaskets') 
@@ -207,6 +219,105 @@ export default function Menu() {
           {/* Only show menu categories when not searching */}
           {!searchQuery && (
             <>
+              {/* Menu Overview Section */}
+              {isActive('overview') && (
+                <div className="menu-category">
+                  <div className="mb-12">
+                    <div className="flex flex-col items-center">
+                      <div className="text-center mb-8">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Our Menu</h3>
+                        <p className="text-foreground/90 mt-3 max-w-3xl mx-auto">
+                          Explore our delicious offerings featuring Maine's finest ingredients. From our famous lobster rolls to home-style fried chicken, 
+                          we offer something for everyone. Click on any category below to see detailed menu items.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div onClick={() => changeCategory('dinnerBaskets')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/dinner-basket-fried.jpg" alt="Dinner Baskets" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Dinner Baskets</h4>
+                        <p className="text-sm text-gray-600">Served with fries, roll & coleslaw</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('snacks')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/nuggets-fries.jpg" alt="Snacks" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Snacks</h4>
+                        <p className="text-sm text-gray-600">Quick bites served with fries</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('pints')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/pint-seafood.jpg" alt="Pints" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Pints</h4>
+                        <p className="text-sm text-gray-600">Generous pint-sized servings</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('specialties')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/lobster-roll-hq.jpg" alt="Specialties" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Specialties</h4>
+                        <p className="text-sm text-gray-600">Featuring our famous lobster roll</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('soups')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/chowder-closeup.jpg" alt="Soups" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Soups & Stews</h4>
+                        <p className="text-sm text-gray-600">Hearty soups to warm you up</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('sandwiches')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/fish-sandwich-closeup.jpg" alt="Sandwiches" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Sandwiches</h4>
+                        <p className="text-sm text-gray-600">Fresh and delicious sandwiches</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('sides')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/fries-closeup.jpg" alt="Sides" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Sides</h4>
+                        <p className="text-sm text-gray-600">Perfect complements to your meal</p>
+                      </div>
+                    </div>
+                    
+                    <div onClick={() => changeCategory('drinks')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
+                      <div className="h-48 overflow-hidden">
+                        <img src="/images/menu/drinks-shakes.jpg" alt="Drinks" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="p-4 text-center bg-accent/10">
+                        <h4 className="text-lg font-heading font-bold text-primary">Drinks</h4>
+                        <p className="text-sm text-gray-600">Refreshing beverages and shakes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
               {/* Dinner Baskets Section */}
               {isActive('dinnerBaskets') && (
                 <div className="menu-category">
