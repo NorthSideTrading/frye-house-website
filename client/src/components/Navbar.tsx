@@ -101,7 +101,7 @@ export default function Navbar() {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-3 pb-2 bg-amber-50/90 backdrop-blur-sm rounded-md p-3 border border-amber-100 shadow-inner">
+          <div className="md:hidden mt-3 pb-2 bg-[var(--color-surface)]/90 backdrop-blur-sm rounded-md p-3 border border-[var(--color-yellow)]/20 shadow-inner">
             {['/', '/menu', '/about', '/gallery', '/contact'].map((path) => {
               const label = path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2);
               
@@ -112,8 +112,8 @@ export default function Navbar() {
                   onClick={closeMenu}
                   className={`block py-2.5 px-3 rounded-md transition duration-300 ${
                     isActive(path) 
-                      ? 'bg-white text-accent font-bold border-l-2 border-accent pl-4' 
-                      : 'text-primary hover:bg-white hover:pl-4'
+                      ? 'bg-[var(--color-surface)]/50 text-[var(--color-red)] font-bold border-l-2 border-[var(--color-yellow)] pl-4' 
+                      : 'text-[var(--color-text)] hover:text-[var(--color-blue)] hover:pl-4'
                   }`}
                 >
                   {label}
