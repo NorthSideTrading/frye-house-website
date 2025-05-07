@@ -163,7 +163,7 @@ export default function Home() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
                     <div className="h-56 overflow-hidden relative">
                       <img 
-                        src="/images/specialties/burger-original.jpg" 
+                        src="/images/specialties/burger-hq.jpg" 
                         alt="Frye House Double Cheeseburger" 
                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
                       />
