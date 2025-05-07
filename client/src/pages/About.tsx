@@ -116,8 +116,8 @@ export default function About() {
                 <div className="absolute -top-3 -left-3 w-24 h-24 bg-amber-100 rounded-lg -z-10"></div>
                 <div className="absolute -bottom-3 -right-3 w-24 h-24 bg-amber-100 rounded-lg -z-10"></div>
                 <img 
-                  src={collageImage} 
-                  alt="Frye House Food Collage" 
+                  src="/images/specialties/burger-hq.jpg" 
+                  alt="Frye House Burger Special" 
                   className="rounded-lg w-full h-auto object-cover z-10"
                 />
                 <div className="absolute top-4 right-4 flex justify-center">
