@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Utensils, Fish, Beef, Clock, MapPin, Phone } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
 import restaurantImage from '@/assets/frye-interior.jpg';
-import burgerImage from '@/assets/frye-burger-new.jpg';
+import burgerImage from '@/assets/frye-burger.jpg';
 import friedChickenImage from '@/assets/frye-fried-platter.jpg';
-import seafoodImage from '@/assets/frye-seafood-new.jpg';
+import seafoodImage from '@/assets/frye-seafood.jpg';
 import fryeHouseLogo from '@/assets/frye-house-circular-logo.png';
 import Testimonials from '@/components/Testimonials';
 
