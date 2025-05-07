@@ -106,7 +106,6 @@ const foodImages: ImageInfo[] = [
     src: image8,
     alt: 'Buffalo Chicken Wrap'
   },
-
   {
     src: image11,
     alt: 'Seafood Feast'
