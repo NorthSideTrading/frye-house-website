@@ -136,8 +136,8 @@ export default function Home() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
                     <div className="h-56 overflow-hidden relative">
                       <img 
-                        src="/images/specialties/seafood-hq.jpg" 
-                        alt="Frye House Fried Clams and Scallops" 
+                        src="/images/specialties/lobster-roll-hq.jpg" 
+                        alt="Frye House Maine Lobster Roll" 
                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
