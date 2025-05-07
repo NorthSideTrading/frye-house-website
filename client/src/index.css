@@ -1,57 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Foundations - Chalkboard Theme */
-    --color-bg: #2f2f2f;         /* Charcoal chalkboard */
-    --color-surface: #3b3b3b;    /* Raised cards / nav */
-    --color-text: #f7f7f7;       /* Chalk-white body text */
-
-    /* Signature accents */
-    --color-yellow: #f5d63d;     /* Sun – for CTAs & highlight icons */
-    --color-red: #e84c45;        /* "Frye House" red for titles */
-    --color-blue: #38a9ff;       /* Wave blue for links, buttons */
-    --color-mint: #c5f5a6;       /* Chalky lime-mint for price badges */
-
-    /* Support shades */
-    --color-yellow-light: #fdefa3;
-    --color-red-dark: #b3312d;
-    --color-blue-dark: #297acc;
-    --color-mint-dark: #95c977;
+    --background: 0 0% 96.1%; /* #F5F5F5 White Smoke */
+    --foreground: 0 0% 23.9%; /* #3D3D3D Charcoal */
     
-    /* Tailwind CSS Variables */
-    --background: 0 0% 18.4%; /* --color-bg */
-    --foreground: 0 0% 96.9%; /* --color-text */
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
     
-    --muted: 0 0% 23.5%;      /* --color-surface */
-    --muted-foreground: 0 0% 80%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 23.9%;
     
-    --popover: 0 0% 23.5%;    /* --color-surface */
-    --popover-foreground: 0 0% 96.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 23.9%;
     
-    --card: 0 0% 23.5%;       /* --color-surface */
-    --card-foreground: 0 0% 96.9%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
     
-    --border: 0 0% 30%;
-    --input: 0 0% 30%;
+    --primary: 4 99% 25%; /* #7C0A02 Barn Red */
+    --primary-foreground: 0 0% 96.1%;
     
-    --primary: 3 77% 59%;     /* --color-red */
-    --primary-foreground: 0 0% 96.9%;
+    --secondary: 0 0% 24%; /* #3D3D3D Charcoal */
+    --secondary-foreground: 0 0% 96.1%;
     
-    --secondary: 210 100% 61%; /* --color-blue */
-    --secondary-foreground: 0 0% 96.9%;
-    
-    --accent: 49 91% 60%;     /* --color-yellow */
-    --accent-foreground: 0 0% 18.4%;
+    --accent: 40 96% 49%; /* #F2A007 Warm Mustard */
+    --accent-foreground: 0 0% 96.1%;
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 96.9%;
+    --destructive-foreground: 0 0% 96.1%;
     
-    --ring: 49 91% 60%;
+    --ring: 0 0% 24%;
     
     --radius: 0.5rem;
   }
@@ -63,12 +43,13 @@
   }
 
   body {
-    font-family: 'Nunito', sans-serif;
-    color: var(--color-text);
-    background-color: var(--color-bg);
+    font-family: 'Open Sans', sans-serif;
+    @apply font-sans antialiased text-foreground;
+    background-color: hsl(var(--background));
     background-image: 
-      radial-gradient(circle at 10% 25%, rgba(245, 214, 61, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 85% 35%, rgba(232, 76, 69, 0.03) 0%, transparent 60%);
+      radial-gradient(circle at 10% 25%, rgba(242, 160, 7, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 85% 35%, rgba(124, 10, 2, 0.06) 0%, transparent 60%),
+      linear-gradient(to bottom, rgba(245, 245, 245, 0.5) 0%, transparent 100%);
     background-attachment: fixed;
     position: relative;
   }
@@ -79,14 +60,13 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(to right, var(--color-red), var(--color-yellow));
+    height: 5px;
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
     z-index: 100;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   section {
