@@ -40,8 +40,8 @@ export default function Navbar() {
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' 
-        : 'bg-white shadow-sm py-4'
+        ? 'bg-white/98 backdrop-blur-sm shadow-sm py-2' 
+        : 'bg-white py-4'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -72,54 +72,55 @@ export default function Navbar() {
           </button>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-1">
-            {['/', '/menu', '/about', '/gallery', '/contact'].map((path) => {
-              const label = path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2);
-              
-              return (
-                <Link 
-                  key={path}
-                  href={path} 
-                  className={`relative px-4 py-2 rounded-md font-semibold transition-all duration-300 ${
-                    isActive(path) 
-                      ? 'text-accent' 
-                      : 'text-primary hover:text-accent'
-                  }`}
-                >
-                  {isActive(path) && (
-                    <span className="absolute inset-0 bg-accent/10 rounded-md -z-10"></span>
-                  )}
-                  {label}
-                  {isActive(path) && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-accent"></span>
-                  )}
-                </Link>
-              );
-            })}
+          <div className="hidden md:flex items-center space-x-2">
+            {[
+              { path: '/', label: 'HOME' },
+              { path: '/menu', label: 'MENU' },
+              { path: '/about', label: 'ABOUT' },
+              { path: '/gallery', label: 'GALLERY' },
+              { path: '/contact', label: 'CONTACT' }
+            ].map(({ path, label }) => (
+              <Link 
+                key={path}
+                href={path} 
+                className={`relative px-4 py-2 font-medium tracking-wide text-sm transition-all duration-300 ${
+                  isActive(path) 
+                    ? 'text-primary' 
+                    : 'text-secondary hover:text-primary'
+                }`}
+              >
+                {label}
+                {isActive(path) && (
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+                )}
+              </Link>
+            ))}
           </div>
         </div>
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-3 pb-2 bg-amber-50/90 backdrop-blur-sm rounded-md p-3 border border-amber-100 shadow-inner">
-            {['/', '/menu', '/about', '/gallery', '/contact'].map((path) => {
-              const label = path === '/' ? 'Home' : path.substring(1).charAt(0).toUpperCase() + path.slice(2);
-              
-              return (
-                <Link 
-                  key={path}
-                  href={path} 
-                  onClick={closeMenu}
-                  className={`block py-2.5 px-3 rounded-md transition duration-300 ${
-                    isActive(path) 
-                      ? 'bg-white text-accent font-bold border-l-2 border-accent pl-4' 
-                      : 'text-primary hover:bg-white hover:pl-4'
-                  }`}
-                >
-                  {label}
-                </Link>
-              );
-            })}
+          <div className="md:hidden mt-3 pb-2 bg-white rounded-md p-3 border border-gray-100 shadow-md">
+            {[
+              { path: '/', label: 'Home' },
+              { path: '/menu', label: 'Menu' },
+              { path: '/about', label: 'About' },
+              { path: '/gallery', label: 'Gallery' },
+              { path: '/contact', label: 'Contact' }
+            ].map(({ path, label }) => (
+              <Link 
+                key={path}
+                href={path} 
+                onClick={closeMenu}
+                className={`block py-2.5 px-3 rounded-md transition duration-300 ${
+                  isActive(path) 
+                    ? 'bg-primary/5 text-primary font-semibold border-l-2 border-primary pl-4' 
+                    : 'text-secondary hover:bg-gray-50 hover:pl-4'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         )}
       </div>
