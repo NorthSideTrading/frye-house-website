@@ -50,15 +50,8 @@ interface ImageInfo {
   alt: string;
 }
 
-// Array of image sources to exclude
-const excludedImages = [
-  logoImage1, 
-  logoImage2, 
-  menuImage1, 
-  menuImage2, 
-  specialImage, 
-  headerImage
-];
+// We'll directly exclude these images from the gallery
+// No need for the array anymore
 
 // Define all images available
 const allGalleryImages: ImageInfo[] = [
@@ -190,12 +183,43 @@ const allGalleryImages: ImageInfo[] = [
     src: image20,
     alt: 'Fish & Chips'
   }
+  // The images to be excluded
+  // {
+  //   src: logoImage1,
+  //   alt: 'Frye House Logo'
+  // },
+  // {
+  //   src: logoImage2,
+  //   alt: 'Frye House Logo 2'
+  // },
+  // {
+  //   src: menuImage1,
+  //   alt: 'Menu Board 1'
+  // },
+  // {
+  //   src: menuImage2,
+  //   alt: 'Menu Board 2'
+  // },
+  // {
+  //   src: specialImage,
+  //   alt: 'Special Image'
+  // },
+  // {
+  //   src: headerImage,
+  //   alt: 'Header Image'
+  // }
 ];
 
-// Filter out excluded images
-const galleryImages: ImageInfo[] = allGalleryImages.filter(img => 
-  !excludedImages.includes(img.src)
-);
+// Create gallery images without the excluded items
+const galleryImages: ImageInfo[] = allGalleryImages.filter(img => {
+  // Filter out the unwanted images by comparing their src to the excluded images
+  return img.src !== logoImage1 && 
+         img.src !== logoImage2 && 
+         img.src !== menuImage1 && 
+         img.src !== menuImage2 && 
+         img.src !== specialImage && 
+         img.src !== headerImage;
+});
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<ImageInfo | null>(null);
