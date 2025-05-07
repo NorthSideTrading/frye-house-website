@@ -122,26 +122,22 @@ export default function Gallery() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="container mx-auto px-4">        
-        {/* Simple Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* Simple Gallery Grid - Fixed */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className="group rounded-xl overflow-hidden shadow-md hover:shadow-lg cursor-pointer transition-all duration-300 bg-white"
+              className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300"
               onClick={() => openImage(image)}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <img 
                   src={image.src} 
                   alt={image.alt} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white text-sm font-medium">{image.alt}</p>
-                </div>
               </div>
             </div>
           ))}
