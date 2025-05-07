@@ -101,8 +101,8 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl">
+        <div className="flex flex-col md:flex-row gap-6 my-12">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl flex-1">
             <div className="h-56 overflow-hidden relative">
               <img 
                 src="/images/specialties/chicken-platter-hq.jpg" 
@@ -128,7 +128,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl flex-1">
             <div className="h-56 overflow-hidden relative">
               <img 
                 src="/images/specialties/seafood-hq.jpg" 
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl flex-1">
             <div className="h-56 overflow-hidden relative">
               <img 
                 src="/images/specialties/burger-original.jpg" 
