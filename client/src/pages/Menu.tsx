@@ -222,98 +222,87 @@ export default function Menu() {
               {/* Menu Overview Section */}
               {isActive('overview') && (
                 <div className="menu-category">
-                  <div className="mb-12">
+                  <div className="mb-8">
                     <div className="flex flex-col items-center">
-                      <div className="text-center mb-8">
+                      <div className="text-center mb-4">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Our Menu</h3>
-                        <p className="text-foreground/90 mt-3 max-w-3xl mx-auto">
-                          Explore our delicious offerings featuring Maine's finest ingredients. From our famous lobster rolls to home-style fried chicken, 
-                          we offer something for everyone. Click on any category below to see detailed menu items.
+                        <p className="text-foreground/80 mt-2 max-w-2xl mx-auto text-sm">
+                          Click any category below to explore our delicious offerings
                         </p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div onClick={() => changeCategory('dinnerBaskets')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/dinner-basket-fried.jpg" alt="Dinner Baskets" className="w-full h-full object-cover" />
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    {[
+                      {
+                        category: 'dinnerBaskets',
+                        title: 'Dinner Baskets',
+                        description: 'Served with fries, roll & coleslaw',
+                        image: '/images/menu/dinner-basket-fried.jpg'
+                      },
+                      {
+                        category: 'snacks',
+                        title: 'Snacks',
+                        description: 'Quick bites served with fries',
+                        image: '/images/menu/nuggets-fries.jpg'
+                      },
+                      {
+                        category: 'pints',
+                        title: 'Pints',
+                        description: 'Generous pint-sized servings',
+                        image: '/images/menu/pint-seafood.jpg'
+                      },
+                      {
+                        category: 'specialties',
+                        title: 'Specialties',
+                        description: 'Featuring our famous lobster roll',
+                        image: '/images/menu/lobster-roll-hq.jpg'
+                      },
+                      {
+                        category: 'soups',
+                        title: 'Soups & Stews',
+                        description: 'Hearty soups to warm you up',
+                        image: '/images/menu/chowder-closeup.jpg'
+                      },
+                      {
+                        category: 'sandwiches',
+                        title: 'Sandwiches',
+                        description: 'Fresh and delicious sandwiches',
+                        image: '/images/menu/fish-sandwich-closeup.jpg'
+                      },
+                      {
+                        category: 'sides',
+                        title: 'Sides',
+                        description: 'Perfect complements to your meal',
+                        image: '/images/menu/fries-closeup.jpg'
+                      },
+                      {
+                        category: 'drinks',
+                        title: 'Drinks',
+                        description: 'Refreshing beverages and shakes',
+                        image: '/images/menu/drinks-shakes.jpg'
+                      }
+                    ].map((item, index) => (
+                      <div 
+                        key={index} 
+                        onClick={() => changeCategory(item.category as any)} 
+                        className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-accent group border border-gray-100"
+                      >
+                        <div className="h-36 overflow-hidden relative">
+                          <img 
+                            src={item.image} 
+                            alt={item.title} 
+                            className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" 
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <div className="p-3 text-center bg-white group-hover:bg-accent/5 transition-colors duration-300">
+                          <h4 className="text-base font-heading font-bold text-primary group-hover:text-accent transition-colors duration-300">{item.title}</h4>
+                          <p className="text-xs text-gray-600 mt-1 line-clamp-2">{item.description}</p>
+                        </div>
                       </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Dinner Baskets</h4>
-                        <p className="text-sm text-gray-600">Served with fries, roll & coleslaw</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('snacks')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/nuggets-fries.jpg" alt="Snacks" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Snacks</h4>
-                        <p className="text-sm text-gray-600">Quick bites served with fries</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('pints')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/pint-seafood.jpg" alt="Pints" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Pints</h4>
-                        <p className="text-sm text-gray-600">Generous pint-sized servings</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('specialties')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/lobster-roll-hq.jpg" alt="Specialties" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Specialties</h4>
-                        <p className="text-sm text-gray-600">Featuring our famous lobster roll</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('soups')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/chowder-closeup.jpg" alt="Soups" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Soups & Stews</h4>
-                        <p className="text-sm text-gray-600">Hearty soups to warm you up</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('sandwiches')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/fish-sandwich-closeup.jpg" alt="Sandwiches" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Sandwiches</h4>
-                        <p className="text-sm text-gray-600">Fresh and delicious sandwiches</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('sides')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/fries-closeup.jpg" alt="Sides" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Sides</h4>
-                        <p className="text-sm text-gray-600">Perfect complements to your meal</p>
-                      </div>
-                    </div>
-                    
-                    <div onClick={() => changeCategory('drinks')} className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-all duration-300">
-                      <div className="h-48 overflow-hidden">
-                        <img src="/images/menu/drinks-shakes.jpg" alt="Drinks" className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4 text-center bg-accent/10">
-                        <h4 className="text-lg font-heading font-bold text-primary">Drinks</h4>
-                        <p className="text-sm text-gray-600">Refreshing beverages and shakes</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               )}
