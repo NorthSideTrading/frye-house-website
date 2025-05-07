@@ -1,0 +1,19 @@
+/* Chalkboard-inspired color palette */
+:root {
+  /* Foundations */
+  --color-bg: #2f2f2f;         /* Charcoal chalkboard */
+  --color-surface: #3b3b3b;    /* Raised cards / nav */
+  --color-text: #f7f7f7;       /* Chalk-white body text */
+
+  /* Signature accents (pull these in moderation for headings, icons, buttons) */
+  --color-yellow: #f5d63d;     /* Sun – use for CTAs & small highlight icons */
+  --color-red: #e84c45;        /* "Frye House" red – h1/h2 titles, active nav */
+  --color-blue: #38a9ff;       /* Wave blue – links, secondary buttons */
+  --color-mint: #c5f5a6;       /* Chalky lime-mint – price badges, subtle accents */
+
+  /* Support shades (optional, for hover states or subtle dividers) */
+  --color-yellow-light: #fdefa3;
+  --color-red-dark: #b3312d;
+  --color-blue-dark: #297acc;
+  --color-mint-dark: #95c977;
+}
