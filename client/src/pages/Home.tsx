@@ -7,167 +7,210 @@ import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
-    <section className="flex-grow bg-pattern-section">
-      <div className="container mx-auto px-4 py-8">
-        {/* Hero Section - Condensed */}
-        <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl shadow-lg overflow-hidden mb-10">
-          {/* Info Bar - Moved to top */}
-          <div className="bg-primary text-white py-3 px-4">
-            <div className="flex flex-wrap justify-between items-center gap-2 text-sm">
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>{restaurantInfo.phone}</span>
+    <section className="py-12 md:py-20 flex-grow bg-pattern-section">
+      <div className="container mx-auto px-4">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl shadow-2xl overflow-hidden mb-20">
+          <div className="relative p-8 md:p-12">
+            {/* Hero content with logo */}
+            <div className="flex flex-col items-center">
+              {/* Mobile: Logo above text for small screens */}
+              <div className="flex md:hidden justify-center w-full mb-6">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-amber-200/20 blur-xl transform scale-110"></div>
+                  <div className="relative">
+                    <img 
+                      src={fryeHouseLogo} 
+                      alt="Frye House Logo" 
+                      className="w-48 h-auto object-contain drop-shadow-md"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>{restaurantInfo.address}</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-2" />
-                <span>Open: {restaurantInfo.hours.monday}</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="p-6 flex flex-col md:flex-row items-center">
-            {/* Logo + Text - Side by side on desktop, stacked on mobile */}
-            <div className="md:w-3/5 mb-4 md:mb-0 md:pr-8 order-2 md:order-1">
-              <h1 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4 text-center md:text-left">
-                Authentic Maine Cuisine
-              </h1>
-              <p className="text-base mb-6 text-foreground">
-                Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
-                We're passionate about serving quality food made with locally-sourced ingredients.
-              </p>
               
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <Link href="/menu">
-                  <Button className="bg-accent hover:bg-primary text-white py-2 px-6 rounded-md shadow-sm">
-                    View Our Menu
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white py-2 px-6 rounded-md">
-                    Find Us
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            
-            <div className="md:w-2/5 order-1 md:order-2 flex justify-center md:justify-end mb-4 md:mb-0">
-              <img 
-                src={fryeHouseLogo} 
-                alt="Frye House Logo" 
-                className="w-48 md:w-56 h-auto object-contain drop-shadow-md"
-              />
-            </div>
-          </div>
-        </div>
-        
-        {/* Specialties Section - Grid layout instead of table */}
-        <div className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3 text-center">Our Signature Specialties</h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            {/* Card 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src="/images/specialties/chicken-platter-hq.jpg" 
-                  alt="Frye House Fried Chicken" 
-                  className="w-full h-full object-cover" 
-                />
-                <div className="absolute bottom-2 left-2 bg-accent text-white px-2 py-1 rounded-full text-xs font-medium">
-                  Customer Favorite
+              {/* Desktop layout: Side by side */}
+              <div className="flex flex-col md:flex-row items-center w-full">
+                <div className="md:w-3/5 mb-6 md:mb-0 md:pr-8">
+                  <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6 text-center md:text-left">
+                    Authentic Maine Cuisine
+                  </h1>
+                  <p className="text-lg mb-8 text-foreground leading-relaxed">
+                    Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
+                    We're passionate about serving quality food made with locally-sourced ingredients that brings people together.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-6">
+                    <Link href="/menu">
+                      <Button className="bg-accent hover:bg-primary text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
+                        View Our Menu
+                      </Button>
+                    </Link>
+                    <Link href="/contact">
+                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
+                        Find Us
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Utensils className="h-5 w-5 text-accent" />
-                  <h3 className="text-lg font-heading font-semibold">Home-Style Cooking</h3>
+                
+                {/* Hide on mobile, show on desktop */}
+                <div className="hidden md:flex md:w-2/5 justify-center items-center md:justify-end">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-amber-200/20 blur-xl transform scale-110"></div>
+                    <div className="relative">
+                      <img 
+                        src={fryeHouseLogo} 
+                        alt="Frye House Logo" 
+                        className="w-80 h-auto object-contain drop-shadow-md"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <p className="text-sm text-foreground">
-                  Our fried chicken and comfort food classics made from scratch using time-honored family recipes.
-                </p>
-              </div>
-            </div>
-            
-            {/* Card 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src="/images/specialties/lobster-roll-hq.jpg" 
-                  alt="Frye House Lobster Roll" 
-                  className="w-full h-full object-cover" 
-                />
-                <div className="absolute bottom-2 left-2 bg-accent text-white px-2 py-1 rounded-full text-xs font-medium">
-                  Maine Specialty
-                </div>
-              </div>
-              <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Fish className="h-5 w-5 text-accent" />
-                  <h3 className="text-lg font-heading font-semibold">Fresh Maine Seafood</h3>
-                </div>
-                <p className="text-sm text-foreground">
-                  From lobster rolls to perfectly fried haddock and scallops, we serve only the freshest local seafood.
-                </p>
-              </div>
-            </div>
-            
-            {/* Card 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src="/images/specialties/burger-hq.jpg" 
-                  alt="Frye House Burger" 
-                  className="w-full h-full object-cover" 
-                />
-                <div className="absolute bottom-2 left-2 bg-accent text-white px-2 py-1 rounded-full text-xs font-medium">
-                  Family Favorite
-                </div>
-              </div>
-              <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Beef className="h-5 w-5 text-accent" />
-                  <h3 className="text-lg font-heading font-semibold">Classic American Fare</h3>
-                </div>
-                <p className="text-sm text-foreground">
-                  Savor our juicy burgers, golden fries, and hearty sandwiches – satisfying comfort food for everyone.
-                </p>
               </div>
             </div>
           </div>
           
-          <div className="text-center mt-6">
-            <Link href="/menu">
-              <Button className="bg-accent hover:bg-primary text-white">
-                View Full Menu
-              </Button>
-            </Link>
+          {/* Quick Info Bar */}
+          <div className="bg-primary text-white py-4 px-6">
+            <div className="container mx-auto max-w-5xl">
+              <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm">
+                <div className="flex items-center w-full lg:w-auto justify-center">
+                  <Phone className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="whitespace-nowrap">{restaurantInfo.phone}</span>
+                </div>
+                <div className="flex items-center w-full lg:w-auto justify-center">
+                  <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="whitespace-nowrap">{restaurantInfo.address}</span>
+                </div>
+                <div className="flex items-center w-full lg:w-auto justify-center">
+                  <Clock className="h-5 w-5 mr-2 flex-shrink-0" />
+                  <span className="whitespace-nowrap">Open Today: {restaurantInfo.hours.monday}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
-        {/* Condensed Testimonials */}
-        <div className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3 text-center">What Our Customers Say</h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-          <Testimonials />
+        {/* Features/Highlights Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Signature Specialties</h2>
+          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            At Frye House, we take pride in our home-cooked meals prepared with the freshest ingredients from local sources. 
+            Every dish is crafted with care to give you an authentic Maine dining experience.
+          </p>
         </div>
         
-        {/* Call to Action - Simplified */}
-        <div className="bg-primary text-white text-center py-8 px-4 rounded-lg mb-6">
-          <h3 className="text-xl md:text-2xl font-bold mb-3">Visit Us Today</h3>
-          <p className="mb-6 max-w-lg mx-auto">Join us for a meal at Frye House and discover why we've become a favorite in Farmingdale since 2017.</p>
-          <div className="flex flex-wrap gap-3 justify-center">
+        <div className="my-12 w-full">
+          <table className="w-full border-separate border-spacing-4">
+            <tbody>
+              <tr>
+                <td className="w-1/3 align-top">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
+                    <div className="h-56 overflow-hidden relative">
+                      <img 
+                        src="/images/specialties/chicken-platter-hq.jpg" 
+                        alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Customer Favorite
+                      </div>
+                    </div>
+                    <div className="p-6 border-t-4 border-accent">
+                      <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
+                        <Utensils className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">Home-Style Cooking</h3>
+                      <p className="text-foreground">
+                        Our fried chicken and comfort food classics are made from scratch using time-honored family recipes and locally sourced ingredients.
+                      </p>
+                      <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
+                        Explore Menu →
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+                <td className="w-1/3 align-top">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
+                    <div className="h-56 overflow-hidden relative">
+                      <img 
+                        src="/images/specialties/lobster-roll-hq.jpg" 
+                        alt="Frye House Maine Lobster Roll" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Maine Specialty
+                      </div>
+                    </div>
+                    <div className="p-6 border-t-4 border-accent">
+                      <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
+                        <Fish className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">Fresh Maine Seafood</h3>
+                      <p className="text-foreground">
+                        From our famous lobster rolls to perfectly fried haddock, scallops, and clams, we serve only the freshest seafood caught locally.
+                      </p>
+                      <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
+                        Explore Menu →
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+                <td className="w-1/3 align-top">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
+                    <div className="h-56 overflow-hidden relative">
+                      <img 
+                        src="/images/specialties/burger-hq.jpg" 
+                        alt="Frye House Double Cheeseburger" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Family Favorite
+                      </div>
+                    </div>
+                    <div className="p-6 border-t-4 border-accent">
+                      <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
+                        <Beef className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">Classic American Fare</h3>
+                      <p className="text-foreground">
+                        Savor our juicy burgers, golden fries, and hearty sandwiches – satisfying comfort food that brings people together.
+                      </p>
+                      <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
+                        Explore Menu →
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        {/* Testimonials Section */}
+        <Testimonials />
+        
+        {/* Call to Action */}
+        <div className="bg-primary text-white text-center py-12 px-6 rounded-xl mt-20 mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Experience the Taste of Maine Today</h3>
+          <p className="mb-8 max-w-2xl mx-auto">Join us for a meal at Frye House and discover why we've become a favorite in Farmingdale since 2017.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-white text-primary hover:bg-amber-100">
+              <Button className="bg-white text-primary hover:bg-amber-100 font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md">
                 Get Directions
               </Button>
             </Link>
+            <Link href="/menu">
+              <Button className="bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md">
+                View Full Menu
+              </Button>
+            </Link>
             <Link href="/contact">
-              <Button className="bg-secondary hover:bg-secondary/80 text-white">
+              <Button className="bg-secondary hover:bg-secondary/80 text-white font-semibold py-3 px-8 rounded-md transition duration-300 shadow-md">
                 Contact Us
               </Button>
             </Link>
