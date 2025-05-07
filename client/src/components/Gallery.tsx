@@ -22,7 +22,7 @@ import image7 from '@/assets/gallery/488912550_1273650647469017_3620668529530846
 import image8 from '@/assets/gallery/489454915_1273694950797920_8102713312156389123_n.jpg';
 import image11 from '@/assets/gallery/486641544_1262356321931783_3794373854376178306_n.jpg';
 import image12 from '@/assets/gallery/486662832_1263300258504056_4195443100909693003_n.jpg';
-import image13 from '@/assets/gallery/487113495_1264438181723597_729783571607825135_n.jpg';
+// Removed menu board image (487113495_1264438181723597_729783571607825135_n.jpg)
 import image14 from '@/assets/gallery/487183336_1263440011823414_5576769489597804407_n.jpg';
 import image15 from '@/assets/gallery/487480645_1267694311397984_1566155661411817192_n.jpg';
 import image16 from '@/assets/gallery/487509735_1264472321720183_3517356073179878111_n.jpg';
@@ -34,6 +34,7 @@ import image20 from '@/assets/gallery/480526483_1233456451488437_139192493845279
 // We've permanently removed these non-food images from the gallery:
 // 1. Frye House Yummy Eats (logo/collage) - 484521789_3442368992567026_4377564385774821010_n.jpg
 // 2. Family Meal menu (menu board) - 482984366_1250764756424273_1979609327465023666_n.jpg
+// 3. Frye House Special Platter (menu board) - 487113495_1264438181723597_729783571607825135_n.jpg
 
 interface ImageInfo {
   src: string;
@@ -114,10 +115,7 @@ const foodImages: ImageInfo[] = [
     src: image12,
     alt: 'Chicken Tenders & Fries'
   },
-  {
-    src: image13,
-    alt: 'Frye House Special Platter'
-  },
+  // Removed menu board image (src: image13, Frye House Special Platter)
   {
     src: image14,
     alt: 'Shrimp Basket'
