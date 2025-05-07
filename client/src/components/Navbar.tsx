@@ -54,11 +54,34 @@ export default function Navbar() {
               <span className="text-xs text-gray-600 mt-0.5 tracking-wider font-light">Farmingdale, Maine</span>
             </div>
           </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-6">
+            {[
+              { path: '/', label: 'HOME' },
+              { path: '/menu', label: 'MENU' },
+              { path: '/about', label: 'ABOUT' },
+              { path: '/gallery', label: 'GALLERY' },
+              { path: '/contact', label: 'CONTACT' }
+            ].map(({ path, label }) => (
+              <Link
+                key={path}
+                href={path}
+                className={`font-medium text-sm tracking-wide transition-all duration-200 ${
+                  isActive(path)
+                    ? 'text-primary font-semibold'
+                    : 'text-gray-800 hover:text-primary'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
           
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMenu}
-            className="text-primary focus:outline-none"
+            className="md:hidden text-primary focus:outline-none"
             aria-label="Toggle menu"
           >
             <div className="w-8 h-8 flex items-center justify-center">
@@ -75,9 +98,9 @@ export default function Navbar() {
           </button>
         </div>
         
-        {/* Main Navigation Menu (appears when menu button is clicked) */}
+        {/* Mobile Navigation Menu (appears when menu button is clicked) */}
         {isMenuOpen && (
-          <div className="mt-4 pb-2">
+          <div className="md:hidden mt-4 pb-2">
             <ul className="flex flex-col space-y-2">
               {[
                 { path: '/', label: 'HOME' },
