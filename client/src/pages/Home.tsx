@@ -2,10 +2,6 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Utensils, Fish, Beef, Clock, MapPin, Phone } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
-import restaurantImage from '@/assets/frye-interior.jpg';
-import burgerImage from '@/assets/frye-burger.jpg';
-import friedChickenImage from '@/assets/chicken-platter-hq.jpg';
-import seafoodImage from '@/assets/hq-seafood.jpg';
 import fryeHouseLogo from '@/assets/frye-house-circular-logo.png';
 import Testimonials from '@/components/Testimonials';
 
@@ -109,7 +105,7 @@ export default function Home() {
           <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl">
             <div className="h-56 overflow-hidden relative">
               <img 
-                src={friedChickenImage} 
+                src="/images/specialties/chicken-platter-hq.jpg" 
                 alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
               />
@@ -135,8 +131,8 @@ export default function Home() {
           <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl">
             <div className="h-56 overflow-hidden relative">
               <img 
-                src={seafoodImage} 
-                alt="Frye House Maine Lobster Roll" 
+                src="/images/specialties/seafood-hq.jpg" 
+                alt="Frye House Fried Clams and Scallops" 
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -161,7 +157,7 @@ export default function Home() {
           <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl">
             <div className="h-56 overflow-hidden relative">
               <img 
-                src={burgerImage} 
+                src="/images/specialties/burger-original.jpg" 
                 alt="Frye House Double Cheeseburger" 
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
               />
