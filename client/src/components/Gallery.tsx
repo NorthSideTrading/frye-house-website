@@ -1,6 +1,20 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
 
+// Import images directly
+import friedCalamari from '@/assets/gallery/fried-calamari.jpg';
+import friedPickles from '@/assets/gallery/fried-pickles.jpg';
+import fishTacos from '@/assets/gallery/fish-tacos.jpg';
+import deluxeBurger from '@/assets/gallery/deluxe-burger.jpg';
+import cornbreadChili from '@/assets/gallery/cornbread-chili.jpg';
+import fishSandwich from '@/assets/gallery/fish-sandwich.jpg';
+import seafoodPlatter from '@/assets/gallery/seafood-platter.jpg';
+import bbqTenders from '@/assets/gallery/bbq-tenders.jpg';
+import chickenPatties from '@/assets/gallery/chicken-patties.jpg';
+import chickenSandwich from '@/assets/gallery/chicken-sandwich.jpg';
+import applePie from '@/assets/gallery/apple-pie.jpg';
+import burgerCombo from '@/assets/gallery/burger-combo.jpg';
+
 interface ImageInfo {
   src: string;
   alt: string;
@@ -9,62 +23,62 @@ interface ImageInfo {
 
 const galleryImages: ImageInfo[] = [
   {
-    src: '/images/gallery/fried-calamari.jpg',
+    src: friedCalamari,
     alt: 'Fried Calamari',
     description: 'Tender calamari lightly battered and fried to perfection, served with our signature dipping sauce'
   },
   {
-    src: '/images/gallery/fried-pickles.jpg',
+    src: friedPickles,
     alt: 'Fried Pickles',
     description: 'Crispy fried pickle slices with a light, flavorful coating, served with our house-made ranch'
   },
   {
-    src: '/images/gallery/fish-tacos.jpg',
+    src: fishTacos,
     alt: 'Fish Tacos',
     description: 'Fresh fish tacos with cabbage slaw, red onions, corn, and our special sauce in corn tortillas'
   },
   {
-    src: '/images/gallery/deluxe-burger.jpg',
+    src: deluxeBurger,
     alt: 'Deluxe Burger',
     description: 'Our famous deluxe burger with multiple beef patties, cheese, bacon, tomato and lettuce on a brioche bun'
   },
   {
-    src: '/images/gallery/cornbread-chili.jpg',
+    src: cornbreadChili,
     alt: 'Cornbread and Chili',
     description: 'Homemade cornbread served with our hearty seafood chili topped with melted cheese'
   },
   {
-    src: '/images/gallery/fish-sandwich.jpg',
+    src: fishSandwich,
     alt: 'Fried Fish Sandwich',
     description: 'Crispy fried fish fillet on a fresh roll with lettuce and tomato'
   },
   {
-    src: '/images/gallery/seafood-platter.jpg',
+    src: seafoodPlatter,
     alt: 'Seafood Platter with Buffalo Tenders',
     description: 'A generous platter with fried seafood and buffalo-style chicken tenders with mac & cheese'
   },
   {
-    src: '/images/gallery/bbq-tenders.jpg',
+    src: bbqTenders,
     alt: 'BBQ Smothered Tenders',
     description: 'Crispy chicken tenders smothered in tangy BBQ sauce with pulled pork'
   },
   {
-    src: '/images/gallery/chicken-patties.jpg',
+    src: chickenPatties,
     alt: 'Homemade Chicken Patties',
     description: 'Our signature hand-formed chicken patties, perfectly seasoned and cooked to a golden brown'
   },
   {
-    src: '/images/gallery/chicken-sandwich.jpg',
+    src: chickenSandwich,
     alt: 'Fried Chicken Sandwich',
     description: 'Crispy fried chicken pieces on a fresh bun with lettuce and tomato'
   },
   {
-    src: '/images/gallery/apple-pie.jpg',
+    src: applePie,
     alt: 'Fried Apple Pies',
     description: 'Flaky hand pies filled with sweet apple filling and dusted with powdered sugar'
   },
   {
-    src: '/images/gallery/burger-combo.jpg',
+    src: burgerCombo,
     alt: 'Burger Combo Meal',
     description: 'Complete meal with a deluxe burger, crispy fried seafood pieces, and crinkle-cut fries'
   }
