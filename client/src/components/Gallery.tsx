@@ -40,169 +40,136 @@ import image20 from '@/assets/gallery/480526483_1233456451488437_139192493845279
 interface ImageInfo {
   src: string;
   alt: string;
-  description: string;
 }
 
 const galleryImages: ImageInfo[] = [
   {
     src: friedCalamari,
-    alt: 'Fried Calamari',
-    description: 'Tender calamari lightly battered and fried to perfection, served with our signature dipping sauce'
+    alt: 'Fried Calamari'
   },
   {
     src: friedPickles,
-    alt: 'Fried Pickles',
-    description: 'Crispy fried pickle slices with a light, flavorful coating, served with our house-made ranch'
+    alt: 'Fried Pickles'
   },
   {
     src: fishTacos,
-    alt: 'Fish Tacos',
-    description: 'Fresh fish tacos with cabbage slaw, red onions, corn, and our special sauce in corn tortillas'
+    alt: 'Fish Tacos'
   },
   {
     src: deluxeBurger,
-    alt: 'Deluxe Burger',
-    description: 'Our famous deluxe burger with multiple beef patties, cheese, bacon, tomato and lettuce on a brioche bun'
+    alt: 'Deluxe Burger'
   },
   {
     src: cornbreadChili,
-    alt: 'Cornbread and Chili',
-    description: 'Homemade cornbread served with our hearty seafood chili topped with melted cheese'
+    alt: 'Cornbread and Chili'
   },
   {
     src: fishSandwich,
-    alt: 'Fried Fish Sandwich',
-    description: 'Crispy fried fish fillet on a fresh roll with lettuce and tomato'
+    alt: 'Fried Fish Sandwich'
   },
   {
     src: seafoodPlatter,
-    alt: 'Seafood Platter with Buffalo Tenders',
-    description: 'A generous platter with fried seafood and buffalo-style chicken tenders with mac & cheese'
+    alt: 'Seafood Platter with Buffalo Tenders'
   },
   {
     src: bbqTenders,
-    alt: 'BBQ Smothered Tenders',
-    description: 'Crispy chicken tenders smothered in tangy BBQ sauce with pulled pork'
+    alt: 'BBQ Smothered Tenders'
   },
   {
     src: chickenPatties,
-    alt: 'Homemade Chicken Patties',
-    description: 'Our signature hand-formed chicken patties, perfectly seasoned and cooked to a golden brown'
+    alt: 'Homemade Chicken Patties'
   },
   {
     src: chickenSandwich,
-    alt: 'Fried Chicken Sandwich',
-    description: 'Crispy fried chicken pieces on a fresh bun with lettuce and tomato'
+    alt: 'Fried Chicken Sandwich'
   },
   {
     src: applePie,
-    alt: 'Fried Apple Pies',
-    description: 'Flaky hand pies filled with sweet apple filling and dusted with powdered sugar'
+    alt: 'Fried Apple Pies'
   },
   {
     src: burgerCombo,
-    alt: 'Burger Combo Meal',
-    description: 'Complete meal with a deluxe burger, crispy fried seafood pieces, and crinkle-cut fries'
+    alt: 'Burger Combo Meal'
   },
   {
     src: image1,
-    alt: 'Chicken Sandwich Special',
-    description: 'Our signature chicken sandwich with fresh toppings on a toasted bun'
+    alt: 'Chicken Sandwich Special'
   },
   {
     src: image2,
-    alt: 'Seafood Platter Deluxe',
-    description: 'Assorted seafood fried to golden perfection with our homemade sauces'
+    alt: 'Seafood Platter Deluxe'
   },
   {
     src: image3,
-    alt: 'Chicken Dinner Basket',
-    description: 'Generous portion of fried chicken with all the sides'
+    alt: 'Chicken Dinner Basket'
   },
   {
     src: image4,
-    alt: 'Fresh Fish Basket',
-    description: 'Lightly breaded and perfectly cooked fish filets'
+    alt: 'Fresh Fish Basket'
   },
   {
     src: image5,
-    alt: 'Seafood Combo',
-    description: 'A seafood lover\'s dream with multiple varieties of fresh-caught seafood'
+    alt: 'Seafood Combo'
   },
   {
     src: image6,
-    alt: 'Fried Shrimp Basket',
-    description: 'Jumbo shrimp lightly battered and fried to golden perfection'
+    alt: 'Fried Shrimp Basket'
   },
   {
     src: image7,
-    alt: 'Grilled Chicken Sandwich',
-    description: 'Tender grilled chicken with lettuce and tomato on a fresh bun'
+    alt: 'Grilled Chicken Sandwich'
   },
   {
     src: image8,
-    alt: 'Buffalo Chicken Wrap',
-    description: 'Spicy buffalo chicken with fresh vegetables wrapped in a soft tortilla'
+    alt: 'Buffalo Chicken Wrap'
   },
   {
     src: image9,
-    alt: 'Homemade Pie Slice',
-    description: 'Freshly baked pie with a flaky crust and sweet filling'
+    alt: 'Homemade Pie Slice'
   },
   {
     src: image10,
-    alt: 'Double Cheeseburger',
-    description: 'Two beef patties with melted cheese and fresh toppings'
+    alt: 'Double Cheeseburger'
   },
   {
     src: image11,
-    alt: 'Seafood Feast',
-    description: 'A feast of mixed seafood served with our special sauces'
+    alt: 'Seafood Feast'
   },
   {
     src: image12,
-    alt: 'Chicken Tenders & Fries',
-    description: 'Crispy chicken tenders served with golden French fries'
+    alt: 'Chicken Tenders & Fries'
   },
   {
     src: image13,
-    alt: 'Frye House Special Platter',
-    description: 'Our signature platter with a variety of customer favorites'
+    alt: 'Frye House Special Platter'
   },
   {
     src: image14,
-    alt: 'Shrimp Basket',
-    description: 'Basket of perfectly fried shrimp with our special seasoning'
+    alt: 'Shrimp Basket'
   },
   {
     src: image15,
-    alt: 'Loaded Sandwich',
-    description: 'Sandwich piled high with your favorite meats and toppings'
+    alt: 'Loaded Sandwich'
   },
   {
     src: image16,
-    alt: 'Maine Lobster Roll',
-    description: 'Fresh Maine lobster in a buttered and toasted roll'
+    alt: 'Maine Lobster Roll'
   },
   {
     src: image17,
-    alt: 'Seafood Mac & Cheese',
-    description: 'Creamy mac & cheese topped with fresh seafood'
+    alt: 'Seafood Mac & Cheese'
   },
   {
     src: image18,
-    alt: 'Classic Burger',
-    description: 'Our classic burger with all your favorite toppings'
+    alt: 'Classic Burger'
   },
   {
     src: image19,
-    alt: 'Fried Haddock',
-    description: 'Fresh haddock lightly battered and fried to perfection'
+    alt: 'Fried Haddock'
   },
   {
     src: image20,
-    alt: 'Fish & Chips',
-    description: 'Traditional fish and chips with our homemade tartar sauce'
+    alt: 'Fish & Chips'
   }
 ];
 
@@ -259,18 +226,12 @@ export default function Gallery() {
                 <X className="h-6 w-6" />
               </button>
               
-              <div className="w-full h-[70vh] bg-neutral-100">
+              <div className="w-full h-[80vh] bg-neutral-100">
                 <img 
                   src={selectedImage.src} 
                   alt={selectedImage.alt} 
                   className="w-full h-full object-contain"
                 />
-              </div>
-              
-              <div className="p-6 bg-white">
-                <h3 className="text-2xl font-heading font-bold text-primary">{selectedImage.alt}</h3>
-                <div className="w-16 h-0.5 bg-accent mt-2 mb-3"></div>
-                <p className="text-gray-700 mt-2 leading-relaxed">{selectedImage.description}</p>
               </div>
             </div>
           </div>
