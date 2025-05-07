@@ -351,7 +351,7 @@ export default function Menu() {
                   <div className="mb-8">
                     <div className="flex flex-col items-center">
                       <div className="text-center mb-4">
-                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Our Menu</h3>
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Category Selection</h3>
                         <p className="text-foreground/80 mt-2 max-w-2xl mx-auto text-sm">
                           Click any category below to explore our delicious offerings
                         </p>
