@@ -101,84 +101,94 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="flex flex-col md:flex-row gap-6 my-12">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl flex-1">
-            <div className="h-56 overflow-hidden relative">
-              <img 
-                src="/images/specialties/chicken-platter-hq.jpg" 
-                alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Customer Favorite
-              </div>
-            </div>
-            <div className="p-6 border-t-4 border-accent">
-              <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
-                <Utensils className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">Home-Style Cooking</h3>
-              <p className="text-foreground">
-                Our fried chicken and comfort food classics are made from scratch using time-honored family recipes and locally sourced ingredients.
-              </p>
-              <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
-                Explore Menu →
-              </Link>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl flex-1">
-            <div className="h-56 overflow-hidden relative">
-              <img 
-                src="/images/specialties/seafood-hq.jpg" 
-                alt="Frye House Fried Clams and Scallops" 
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Maine Specialty
-              </div>
-            </div>
-            <div className="p-6 border-t-4 border-accent">
-              <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
-                <Fish className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">Fresh Maine Seafood</h3>
-              <p className="text-foreground">
-                From our famous lobster rolls to perfectly fried haddock, scallops, and clams, we serve only the freshest seafood caught locally.
-              </p>
-              <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
-                Explore Menu →
-              </Link>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl flex-1">
-            <div className="h-56 overflow-hidden relative">
-              <img 
-                src="/images/specialties/burger-original.jpg" 
-                alt="Frye House Double Cheeseburger" 
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Family Favorite
-              </div>
-            </div>
-            <div className="p-6 border-t-4 border-accent">
-              <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
-                <Beef className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-heading font-semibold mb-3">Classic American Fare</h3>
-              <p className="text-foreground">
-                Savor our juicy burgers, golden fries, and hearty sandwiches – satisfying comfort food that brings people together.
-              </p>
-              <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
-                Explore Menu →
-              </Link>
-            </div>
-          </div>
+        <div className="my-12 w-full">
+          <table className="w-full border-separate border-spacing-4">
+            <tbody>
+              <tr>
+                <td className="w-1/3 align-top">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
+                    <div className="h-56 overflow-hidden relative">
+                      <img 
+                        src="/images/specialties/chicken-platter-hq.jpg" 
+                        alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Customer Favorite
+                      </div>
+                    </div>
+                    <div className="p-6 border-t-4 border-accent">
+                      <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
+                        <Utensils className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">Home-Style Cooking</h3>
+                      <p className="text-foreground">
+                        Our fried chicken and comfort food classics are made from scratch using time-honored family recipes and locally sourced ingredients.
+                      </p>
+                      <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
+                        Explore Menu →
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+                <td className="w-1/3 align-top">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
+                    <div className="h-56 overflow-hidden relative">
+                      <img 
+                        src="/images/specialties/seafood-hq.jpg" 
+                        alt="Frye House Fried Clams and Scallops" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Maine Specialty
+                      </div>
+                    </div>
+                    <div className="p-6 border-t-4 border-accent">
+                      <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
+                        <Fish className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">Fresh Maine Seafood</h3>
+                      <p className="text-foreground">
+                        From our famous lobster rolls to perfectly fried haddock, scallops, and clams, we serve only the freshest seafood caught locally.
+                      </p>
+                      <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
+                        Explore Menu →
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+                <td className="w-1/3 align-top">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-xl h-full">
+                    <div className="h-56 overflow-hidden relative">
+                      <img 
+                        src="/images/specialties/burger-original.jpg" 
+                        alt="Frye House Double Cheeseburger" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Family Favorite
+                      </div>
+                    </div>
+                    <div className="p-6 border-t-4 border-accent">
+                      <div className="inline-block p-3 bg-amber-100 rounded-full text-accent mb-4">
+                        <Beef className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-heading font-semibold mb-3">Classic American Fare</h3>
+                      <p className="text-foreground">
+                        Savor our juicy burgers, golden fries, and hearty sandwiches – satisfying comfort food that brings people together.
+                      </p>
+                      <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
+                        Explore Menu →
+                      </Link>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         
         {/* Testimonials Section */}
