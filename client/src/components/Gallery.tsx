@@ -15,6 +15,28 @@ import chickenSandwich from '@/assets/gallery/chicken-sandwich.jpg';
 import applePie from '@/assets/gallery/apple-pie.jpg';
 import burgerCombo from '@/assets/gallery/burger-combo.jpg';
 
+// Additional images
+import image1 from '@/assets/gallery/486690171_1263300221837393_1436366903878772182_n.jpg';
+import image2 from '@/assets/gallery/487377884_1264436278390454_8773674130860900824_n.jpg';
+import image3 from '@/assets/gallery/487925145_1267694434731305_1269054901253905838_n.jpg';
+import image4 from '@/assets/gallery/487980399_1266173068216775_4660398503708095578_n.jpg';
+import image5 from '@/assets/gallery/488026039_1266169921550423_583545511506543321_n.jpg';
+import image6 from '@/assets/gallery/488887172_1271694624331286_4920197146466631889_n.jpg';
+import image7 from '@/assets/gallery/488912550_1273650647469017_3620668529530846844_n.jpg';
+import image8 from '@/assets/gallery/489454915_1273694950797920_8102713312156389123_n.jpg';
+import image9 from '@/assets/gallery/482984366_1250764756424273_1979609327465023666_n.jpg';
+import image10 from '@/assets/gallery/484521789_3442368992567026_4377564385774821010_n.jpg';
+import image11 from '@/assets/gallery/486641544_1262356321931783_3794373854376178306_n.jpg';
+import image12 from '@/assets/gallery/486662832_1263300258504056_4195443100909693003_n.jpg';
+import image13 from '@/assets/gallery/487113495_1264438181723597_729783571607825135_n.jpg';
+import image14 from '@/assets/gallery/487183336_1263440011823414_5576769489597804407_n.jpg';
+import image15 from '@/assets/gallery/487480645_1267694311397984_1566155661411817192_n.jpg';
+import image16 from '@/assets/gallery/487509735_1264472321720183_3517356073179878111_n.jpg';
+import image17 from '@/assets/gallery/487839544_1266169941550421_2669517215809895252_n.jpg';
+import image18 from '@/assets/gallery/487857865_1269141471253268_6195460534081170036_n.jpg';
+import image19 from '@/assets/gallery/488066709_1266172994883449_6040987241861491594_n.jpg';
+import image20 from '@/assets/gallery/480526483_1233456451488437_1391924938452794111_n.jpg';
+
 interface ImageInfo {
   src: string;
   alt: string;
@@ -81,6 +103,106 @@ const galleryImages: ImageInfo[] = [
     src: burgerCombo,
     alt: 'Burger Combo Meal',
     description: 'Complete meal with a deluxe burger, crispy fried seafood pieces, and crinkle-cut fries'
+  },
+  {
+    src: image1,
+    alt: 'Chicken Sandwich Special',
+    description: 'Our signature chicken sandwich with fresh toppings on a toasted bun'
+  },
+  {
+    src: image2,
+    alt: 'Seafood Platter Deluxe',
+    description: 'Assorted seafood fried to golden perfection with our homemade sauces'
+  },
+  {
+    src: image3,
+    alt: 'Chicken Dinner Basket',
+    description: 'Generous portion of fried chicken with all the sides'
+  },
+  {
+    src: image4,
+    alt: 'Fresh Fish Basket',
+    description: 'Lightly breaded and perfectly cooked fish filets'
+  },
+  {
+    src: image5,
+    alt: 'Seafood Combo',
+    description: 'A seafood lover\'s dream with multiple varieties of fresh-caught seafood'
+  },
+  {
+    src: image6,
+    alt: 'Fried Shrimp Basket',
+    description: 'Jumbo shrimp lightly battered and fried to golden perfection'
+  },
+  {
+    src: image7,
+    alt: 'Grilled Chicken Sandwich',
+    description: 'Tender grilled chicken with lettuce and tomato on a fresh bun'
+  },
+  {
+    src: image8,
+    alt: 'Buffalo Chicken Wrap',
+    description: 'Spicy buffalo chicken with fresh vegetables wrapped in a soft tortilla'
+  },
+  {
+    src: image9,
+    alt: 'Homemade Pie Slice',
+    description: 'Freshly baked pie with a flaky crust and sweet filling'
+  },
+  {
+    src: image10,
+    alt: 'Double Cheeseburger',
+    description: 'Two beef patties with melted cheese and fresh toppings'
+  },
+  {
+    src: image11,
+    alt: 'Seafood Feast',
+    description: 'A feast of mixed seafood served with our special sauces'
+  },
+  {
+    src: image12,
+    alt: 'Chicken Tenders & Fries',
+    description: 'Crispy chicken tenders served with golden French fries'
+  },
+  {
+    src: image13,
+    alt: 'Frye House Special Platter',
+    description: 'Our signature platter with a variety of customer favorites'
+  },
+  {
+    src: image14,
+    alt: 'Shrimp Basket',
+    description: 'Basket of perfectly fried shrimp with our special seasoning'
+  },
+  {
+    src: image15,
+    alt: 'Loaded Sandwich',
+    description: 'Sandwich piled high with your favorite meats and toppings'
+  },
+  {
+    src: image16,
+    alt: 'Maine Lobster Roll',
+    description: 'Fresh Maine lobster in a buttered and toasted roll'
+  },
+  {
+    src: image17,
+    alt: 'Seafood Mac & Cheese',
+    description: 'Creamy mac & cheese topped with fresh seafood'
+  },
+  {
+    src: image18,
+    alt: 'Classic Burger',
+    description: 'Our classic burger with all your favorite toppings'
+  },
+  {
+    src: image19,
+    alt: 'Fried Haddock',
+    description: 'Fresh haddock lightly battered and fried to perfection'
+  },
+  {
+    src: image20,
+    alt: 'Fish & Chips',
+    description: 'Traditional fish and chips with our homemade tartar sauce'
   }
 ];
 
