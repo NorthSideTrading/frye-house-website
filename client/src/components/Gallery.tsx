@@ -37,6 +37,15 @@ import image18 from '@/assets/gallery/487857865_1269141471253268_619546053408117
 import image19 from '@/assets/gallery/488066709_1266172994883449_6040987241861491594_n.jpg';
 import image20 from '@/assets/gallery/480526483_1233456451488437_1391924938452794111_n.jpg';
 
+// Special imports that should NOT be included in gallery
+// These are for reference only
+// import logoImage1 from '@/assets/gallery/157608030_2160287684108503_7916166509472254962_n.jpg';
+// import logoImage2 from '@/assets/gallery/157965663_2160287754108496_8082224833264090225_n.jpg';
+// import menuImage1 from '@/assets/gallery/174272064_2196868370450434_2489799102715996970_n.jpg';
+// import menuImage2 from '@/assets/gallery/174568806_2197665850370686_1068853380304481143_n.jpg';
+// import specialImage from '@/assets/gallery/images.jpg';
+// import headerImage from '@/assets/gallery/304019965_595571718610250_2175908976454373250_n.jpg';
+
 interface ImageInfo {
   src: string;
   alt: string;
