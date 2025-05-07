@@ -43,51 +43,9 @@ export default function Testimonials() {
           </p>
         </div>
         
-        {/* Mobile view - single testimonial with navigation */}
-        <div className="md:hidden relative">
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8 relative">
-            <div className="absolute -top-3 -left-3 w-10 h-10 bg-accent/10 text-accent rounded-full flex items-center justify-center">
-              <Quote className="w-5 h-5" />
-            </div>
-            
-            <div className="pt-3">
-              <p className="text-foreground italic mb-4">"{testimonials[currentIndex].text}"</p>
-              
-              <div className="flex items-center mt-4">
-                <div className="flex-1">
-                  <p className="font-semibold text-primary">{testimonials[currentIndex].name}</p>
-                  <div className="flex items-center mt-1">
-                    {renderStars(testimonials[currentIndex].rating)}
-                    <span className="ml-2 text-sm text-gray-500">{testimonials[currentIndex].date}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex justify-center gap-4">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="rounded-full h-10 w-10 p-0 border-accent text-accent hover:bg-accent hover:text-white"
-              onClick={prevTestimonial}
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="rounded-full h-10 w-10 p-0 border-accent text-accent hover:bg-accent hover:text-white"
-              onClick={nextTestimonial}
-            >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-        
-        {/* Desktop view - multiple testimonials */}
-        <div className="hidden md:block">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        {/* Always show 3 testimonials for all screen sizes */}
+        <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative">
             {[0, 1, 2].map((offset) => {
               const index = (currentIndex + offset) % testimonials.length;
               return (
