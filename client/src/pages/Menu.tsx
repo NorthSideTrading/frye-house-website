@@ -275,13 +275,13 @@ export default function Menu() {
                         category: 'sides',
                         title: 'Sides',
                         description: 'Perfect complements to your meal',
-                        image: '/images/menu/fries-closeup.jpg'
+                        image: '/images/menu/coleslaw-sides.jpg'
                       },
                       {
                         category: 'drinks',
                         title: 'Drinks',
                         description: 'Refreshing beverages and shakes',
-                        image: '/images/menu/drinks-shakes.jpg'
+                        image: '/images/menu/milkshakes.webp'
                       }
                     ].map((item, index) => (
                       <div 
