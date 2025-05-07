@@ -9,21 +9,32 @@ export default function About() {
   return (
     <section className="py-12 md:py-20 flex-grow bg-pattern-section">
       <div className="container mx-auto px-4">
-        {/* Hero Section with Visual Impact */}
+        {/* Hero Section with About Us Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">About Us</h1>
+          <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+            Serving homemade comfort food in Farmingdale, Maine
+          </p>
+        </div>
+        
+        {/* Featured Image Banner */}
         <div className="rounded-xl overflow-hidden relative mb-16 shadow-xl">
-          <div className="absolute inset-0 bg-primary/60 z-10"></div>
-          <div className="relative z-20 text-center py-16 md:py-24 px-4">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Story</h1>
-            <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto font-light">
-              A taste of Maine comfort since we first opened our doors
-            </p>
-          </div>
           <img 
-            src="/images/specialties/lobster-roll-closeup.jpg" 
+            src="/images/specialties/lobster-roll-hq.jpg" 
             alt="Frye House Specialty" 
-            className="absolute inset-0 w-full h-full object-cover -z-10"
+            className="w-full h-[300px] md:h-[400px] object-cover"
           />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent py-12 px-6">
+            <div className="container mx-auto">
+              <h2 className="text-2xl md:text-3xl font-heading font-semibold text-white">
+                Good food, made simple
+              </h2>
+              <p className="text-white/90 max-w-lg">
+                A taste of Maine comfort since we first opened our doors
+              </p>
+            </div>
+          </div>
         </div>
         
         {/* Main Content - Story & Values */}
