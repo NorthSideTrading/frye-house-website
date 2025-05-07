@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useMenuTabs } from '@/hooks/use-menu-tabs';
 import { dinnerBaskets, snacks, pints, specialties, soups, sandwiches, sides, drinks } from '@/lib/data';
 import { Input } from '@/components/ui/input';
-import { Search, X } from 'lucide-react';
+import { Search, X, ChevronDown, ChevronUp } from 'lucide-react';
 import type { MenuItem } from '../lib/types';
 
 // Enhanced menu item component for a more stylish display
@@ -24,6 +24,8 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => {
 export default function Menu() {
   const { activeCategory, changeCategory, isActive } = useMenuTabs();
   const [searchQuery, setSearchQuery] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [suggestionsList, setSuggestionsList] = useState<string[]>([]);
   
   // Combine all menu items for searching
   const allMenuItems = [
@@ -36,6 +38,53 @@ export default function Menu() {
     ...sides.map(item => ({ ...item, category: 'sides' })),
     ...drinks.map(item => ({ ...item, category: 'drinks' }))
   ];
+  
+  // Extract keywords from menu items for autocomplete suggestions
+  const menuItemNames = allMenuItems.map(item => item.name);
+  const additionalKeywords = [
+    'Lobster Roll', 'Chicken', 'Haddock', 'Scallops', 'Shrimp', 'Clam', 
+    'Mixed Sea', 'Fish', 'Burger', 'Pint', 'Basket', 'Wings', 'Stew', 
+    'Soup', 'Chowder', 'Sandwich', 'Fries', 'Onion Rings', 'Coleslaw',
+    'Milkshake', 'Drink', 'Tenderloin', 'Seafood', 'Hot Dog', 'Grilled Cheese',
+    'Philly', 'BBQ', 'Pizza', 'Salad', 'Dinner', 'Snack'
+  ];
+  
+  // Combine and remove duplicates
+  const autocompleteKeywords = [...new Set([...menuItemNames, ...additionalKeywords])].sort();
+  
+  // Update suggestions based on input
+  useEffect(() => {
+    if (searchQuery.length >= 1) {
+      const filteredSuggestions = autocompleteKeywords.filter(keyword => 
+        keyword.toLowerCase().includes(searchQuery.toLowerCase()) && 
+        keyword.toLowerCase() !== searchQuery.toLowerCase()
+      ).slice(0, 6); // Limit to top 6 suggestions
+      
+      setSuggestionsList(filteredSuggestions);
+      setShowSuggestions(filteredSuggestions.length > 0);
+    } else {
+      setShowSuggestions(false);
+      setSuggestionsList([]);
+    }
+  }, [searchQuery]);
+  
+  // Handle selecting a suggestion
+  const handleSelectSuggestion = (suggestion: string) => {
+    setSearchQuery(suggestion);
+    setShowSuggestions(false);
+  };
+  
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setShowSuggestions(false);
+    };
+    
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
   
   // Filter menu items based on search query
   const filteredItems = searchQuery 
@@ -64,14 +113,50 @@ export default function Menu() {
               className="pl-10 pr-10 py-2 border-accent/30 focus:border-accent focus:ring-accent"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (searchQuery.length > 0 && suggestionsList.length > 0) {
+                  setShowSuggestions(true);
+                }
+              }}
             />
             {searchQuery && (
               <button 
                 className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                onClick={() => setSearchQuery('')}
+                onClick={() => {
+                  setSearchQuery('');
+                  setShowSuggestions(false);
+                }}
               >
                 <X className="h-5 w-5 text-gray-400 hover:text-primary" />
               </button>
+            )}
+            
+            {/* Autocomplete Dropdown */}
+            {showSuggestions && (
+              <div 
+                className="absolute z-20 mt-1 w-full bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ul className="py-1">
+                  {suggestionsList.map((suggestion, index) => (
+                    <li 
+                      key={index}
+                      className="px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 cursor-pointer flex items-center"
+                      onClick={() => handleSelectSuggestion(suggestion)}
+                    >
+                      <Search className="h-3.5 w-3.5 mr-2 text-gray-400" />
+                      <span>
+                        {suggestion.split(new RegExp(`(${searchQuery})`, 'i')).map((part, i) => 
+                          part.toLowerCase() === searchQuery.toLowerCase() ? 
+                            <span key={i} className="font-bold text-accent">{part}</span> : 
+                            <span key={i}>{part}</span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
           
