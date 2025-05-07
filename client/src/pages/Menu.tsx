@@ -49,14 +49,24 @@ export default function Menu() {
     'Philly', 'BBQ', 'Pizza', 'Salad', 'Dinner', 'Snack'
   ];
   
-  // Combine and remove duplicates
-  const autocompleteKeywords = [...new Set([...menuItemNames, ...additionalKeywords])].sort();
+  // Remove duplicates from combined keywords array
+  const combinedKeywords = [...menuItemNames, ...additionalKeywords];
+  const uniqueKeywords: { [key: string]: boolean } = {};
+  const autocompleteKeywords = combinedKeywords
+    .filter(keyword => {
+      if (!uniqueKeywords[keyword]) {
+        uniqueKeywords[keyword] = true;
+        return true;
+      }
+      return false;
+    })
+    .sort();
   
   // Update suggestions based on input
   useEffect(() => {
     if (searchQuery.length >= 1) {
       const filteredSuggestions = autocompleteKeywords.filter(keyword => 
-        keyword.toLowerCase().includes(searchQuery.toLowerCase()) && 
+        keyword.toLowerCase().startsWith(searchQuery.toLowerCase()) && 
         keyword.toLowerCase() !== searchQuery.toLowerCase()
       ).slice(0, 6); // Limit to top 6 suggestions
       
