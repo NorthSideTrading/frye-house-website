@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Phone, MapPin, Clock, ChefHat, Ship, Coffee } from 'lucide-react';
 import { restaurantInfo } from '@/lib/data';
 import fryeHouseLogo from '@/assets/frye-house-logo.jpg';
-import collageImage from '@/assets/frye-collage.jpg';
+// Replaced collage with food image for consistency
 
 export default function About() {
   return (
