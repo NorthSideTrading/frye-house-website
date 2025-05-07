@@ -74,6 +74,37 @@ export default function Menu() {
               </button>
             )}
           </div>
+          
+          {/* Keyword Suggestions */}
+          <div className="mt-4 mb-2">
+            <div className="flex items-center justify-center mb-2">
+              <span className="text-sm text-gray-600 font-medium mr-2">Try popular searches:</span>
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {[
+                'Lobster Roll', 
+                'Haddock', 
+                'Scallops', 
+                'Chicken', 
+                'Basket', 
+                'Clams', 
+                'Burger', 
+                'Pint',
+                'Wings',
+                'Milkshake',
+                'Onion Rings',
+                'Fries'
+              ].map((keyword) => (
+                <button
+                  key={keyword}
+                  onClick={() => setSearchQuery(keyword)}
+                  className="px-3 py-1.5 bg-accent/10 hover:bg-accent/20 text-primary text-xs font-medium rounded-full transition-all duration-200 hover:shadow-sm border border-accent/10 hover:border-accent/30"
+                >
+                  {keyword}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
         
         {/* Search Results */}
@@ -369,13 +400,13 @@ export default function Menu() {
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
                           src="/images/menu/pint-seafood.jpg" 
-                          alt="Frye House Fried Seafood Pint with Tartar Sauce" 
+                          alt="Frye House Seafood Pint" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Pints</h3>
-                        <p className="text-foreground/90 italic mt-1">Generous pint-sized servings of our delicious fried foods.</p>
+                        <p className="text-foreground/90 italic mt-1">Our pint-sized servings - great for sharing or a hearty meal.</p>
                       </div>
                     </div>
                   </div>
@@ -396,13 +427,13 @@ export default function Menu() {
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
                           src="/images/menu/lobster-roll-hq.jpg" 
-                          alt="Frye House Specialties - Lobster Roll" 
+                          alt="Frye House Lobster Roll" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Specialties</h3>
-                        <p className="text-foreground/90 italic mt-1">Try our specialties including the Family Meal, wings, and our famous lobster rolls.</p>
+                        <p className="text-foreground/90 italic mt-1">Our specialty items including our famous lobster roll.</p>
                       </div>
                     </div>
                   </div>
@@ -423,13 +454,13 @@ export default function Menu() {
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
                           src="/images/menu/chowder-closeup.jpg" 
-                          alt="Frye House Soups" 
+                          alt="Frye House Seafood Stew" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Soups & Stews</h3>
-                        <p className="text-foreground/90 italic mt-1">Our hearty soups and stews are the perfect way to warm up on a cool day or add to your meal.</p>
+                        <p className="text-foreground/90 italic mt-1">Our signature soups and stews to warm you up.</p>
                       </div>
                     </div>
                   </div>
@@ -450,13 +481,13 @@ export default function Menu() {
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
                           src="/images/menu/fish-sandwich-closeup.jpg" 
-                          alt="Frye House Sandwiches" 
+                          alt="Frye House Fish Sandwich" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Sandwiches</h3>
-                        <p className="text-foreground/90 italic mt-1">Our sandwiches are made with fresh ingredients and served on quality bread. Add fries to make it a meal.</p>
+                        <p className="text-foreground/90 italic mt-1">Our delicious sandwich options.</p>
                       </div>
                     </div>
                   </div>
@@ -477,13 +508,13 @@ export default function Menu() {
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
                           src="/images/menu/coleslaw-sides.jpg" 
-                          alt="Frye House Sides" 
+                          alt="Frye House Side Orders" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Sides</h3>
-                        <p className="text-foreground/90 italic mt-1">Complete your meal with our selection of delicious sides. From onion rings to fried pickles, we have the perfect complement to your main dish.</p>
+                        <p className="text-foreground/90 italic mt-1">Perfect additions to complete your meal.</p>
                       </div>
                     </div>
                   </div>
@@ -504,13 +535,13 @@ export default function Menu() {
                       <div className="w-full h-auto overflow-hidden rounded-lg bg-white p-1 mb-4">
                         <img 
                           src="/images/menu/milkshakes.webp" 
-                          alt="Frye House Milkshakes and Drinks" 
+                          alt="Frye House Milkshakes" 
                           className="w-full max-h-[400px] object-contain mx-auto" 
                         />
                       </div>
                       <div className="text-center mb-4 border-b-2 border-primary pb-2 max-w-md">
                         <h3 className="text-2xl md:text-3xl font-heading font-bold text-primary">Drinks</h3>
-                        <p className="text-foreground/90 italic mt-1">Quench your thirst with our selection of refreshing beverages and delicious milkshakes.</p>
+                        <p className="text-foreground/90 italic mt-1">Refreshing beverages to accompany your meal.</p>
                       </div>
                     </div>
                   </div>
