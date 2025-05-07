@@ -33,12 +33,14 @@ import image18 from '@/assets/gallery/487857865_1269141471253268_619546053408117
 import image19 from '@/assets/gallery/488066709_1266172994883449_6040987241861491594_n.jpg';
 import image20 from '@/assets/gallery/480526483_1233456451488437_1391924938452794111_n.jpg';
 
-// These are specifically the images to be excluded based on screenshot
-import logoHeaderImage from '@/assets/gallery/157608030_2160287684108503_7916166509472254962_n.jpg';
-import menuBoardImage from '@/assets/gallery/174272064_2196868370450434_2489799102715996970_n.jpg';
-// Just in case there are other variations
-import logoImage2 from '@/assets/gallery/157965663_2160287754108496_8082224833264090225_n.jpg';
-import menuImage2 from '@/assets/gallery/174568806_2197665850370686_1068853380304481143_n.jpg';
+// We've excluded these non-food images:
+// 1. Frye House Yummy Eats (logo/collage)
+// 2. Family Meal menu (menu board)
+// Specifically these files:
+// @/assets/gallery/157608030_2160287684108503_7916166509472254962_n.jpg (logo)
+// @/assets/gallery/174272064_2196868370450434_2489799102715996970_n.jpg (menu)
+// @/assets/gallery/157965663_2160287754108496_8082224833264090225_n.jpg (logo variant)
+// @/assets/gallery/174568806_2197665850370686_1068853380304481143_n.jpg (menu variant)
 
 interface ImageInfo {
   src: string;
@@ -161,13 +163,8 @@ const foodImages: ImageInfo[] = [
   }
 ];
 
-// Array of non-food images to be excluded
-const excludedImages = [
-  logoHeaderImage,
-  menuBoardImage,
-  logoImage2,
-  menuImage2,
-];
+// We've completely removed non-food images from our gallery
+// No need for an exclusion array anymore since we're only importing what we want to show
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<ImageInfo | null>(null);
