@@ -2,14 +2,10 @@ import { useState } from 'react';
 import { X } from 'lucide-react';
 
 // Import images directly
-import friedCalamari from '@/assets/gallery/fried-calamari.jpg';
 import friedPickles from '@/assets/gallery/fried-pickles.jpg';
-import fishTacos from '@/assets/gallery/fish-tacos.jpg';
 import deluxeBurger from '@/assets/gallery/deluxe-burger.jpg';
 import cornbreadChili from '@/assets/gallery/cornbread-chili.jpg';
 import fishSandwich from '@/assets/gallery/fish-sandwich.jpg';
-import seafoodPlatter from '@/assets/gallery/seafood-platter.jpg';
-import bbqTenders from '@/assets/gallery/bbq-tenders.jpg';
 import chickenPatties from '@/assets/gallery/chicken-patties.jpg';
 import chickenSandwich from '@/assets/gallery/chicken-sandwich.jpg';
 import applePie from '@/assets/gallery/apple-pie.jpg';
@@ -37,35 +33,16 @@ import image18 from '@/assets/gallery/487857865_1269141471253268_619546053408117
 import image19 from '@/assets/gallery/488066709_1266172994883449_6040987241861491594_n.jpg';
 import image20 from '@/assets/gallery/480526483_1233456451488437_1391924938452794111_n.jpg';
 
-// Imports for images that should be filtered out
-import logoImage1 from '@/assets/gallery/157608030_2160287684108503_7916166509472254962_n.jpg';
-import logoImage2 from '@/assets/gallery/157965663_2160287754108496_8082224833264090225_n.jpg';
-import menuImage1 from '@/assets/gallery/174272064_2196868370450434_2489799102715996970_n.jpg';
-import menuImage2 from '@/assets/gallery/174568806_2197665850370686_1068853380304481143_n.jpg';
-import specialImage from '@/assets/gallery/images.jpg';
-import headerImage from '@/assets/gallery/304019965_595571718610250_2175908976454373250_n.jpg';
-
 interface ImageInfo {
   src: string;
   alt: string;
 }
 
-// We'll directly exclude these images from the gallery
-// No need for the array anymore
-
-// Define all images available
-const allGalleryImages: ImageInfo[] = [
-  {
-    src: friedCalamari,
-    alt: 'Fried Calamari'
-  },
+// Define all gallery images - REMOVED the logo and menu images
+const galleryImages: ImageInfo[] = [
   {
     src: friedPickles,
     alt: 'Fried Pickles'
-  },
-  {
-    src: fishTacos,
-    alt: 'Fish Tacos'
   },
   {
     src: deluxeBurger,
@@ -78,14 +55,6 @@ const allGalleryImages: ImageInfo[] = [
   {
     src: fishSandwich,
     alt: 'Fried Fish Sandwich'
-  },
-  {
-    src: seafoodPlatter,
-    alt: 'Seafood Platter with Buffalo Tenders'
-  },
-  {
-    src: bbqTenders,
-    alt: 'BBQ Smothered Tenders'
   },
   {
     src: chickenPatties,
@@ -183,43 +152,7 @@ const allGalleryImages: ImageInfo[] = [
     src: image20,
     alt: 'Fish & Chips'
   }
-  // The images to be excluded
-  // {
-  //   src: logoImage1,
-  //   alt: 'Frye House Logo'
-  // },
-  // {
-  //   src: logoImage2,
-  //   alt: 'Frye House Logo 2'
-  // },
-  // {
-  //   src: menuImage1,
-  //   alt: 'Menu Board 1'
-  // },
-  // {
-  //   src: menuImage2,
-  //   alt: 'Menu Board 2'
-  // },
-  // {
-  //   src: specialImage,
-  //   alt: 'Special Image'
-  // },
-  // {
-  //   src: headerImage,
-  //   alt: 'Header Image'
-  // }
 ];
-
-// Create gallery images without the excluded items
-const galleryImages: ImageInfo[] = allGalleryImages.filter(img => {
-  // Filter out the unwanted images by comparing their src to the excluded images
-  return img.src !== logoImage1 && 
-         img.src !== logoImage2 && 
-         img.src !== menuImage1 && 
-         img.src !== menuImage2 && 
-         img.src !== specialImage && 
-         img.src !== headerImage;
-});
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<ImageInfo | null>(null);
