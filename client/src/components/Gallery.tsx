@@ -1,24 +1,6 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
 
-// Import all images
-import foodImage1 from '@/assets/gallery/frye-food-1.jpg';
-import foodImage2 from '@/assets/gallery/frye-food-2.jpg';
-import foodImage3 from '@/assets/gallery/frye-food-3.jpg';
-import foodImage4 from '@/assets/gallery/frye-food-4.jpg';
-import foodImage5 from '@/assets/gallery/frye-food-5.jpg';
-import foodImage6 from '@/assets/gallery/frye-food-6.jpg';
-import foodImage7 from '@/assets/gallery/frye-food-7.jpg';
-import foodImage8 from '@/assets/gallery/frye-food-8.jpg';
-import foodImage9 from '@/assets/gallery/frye-food-9.jpg';
-import foodImage10 from '@/assets/gallery/frye-food-10.jpg';
-import foodImage11 from '@/assets/gallery/frye-food-11.jpg';
-import foodImage12 from '@/assets/gallery/frye-food-12.jpg';
-import foodImage13 from '@/assets/gallery/frye-food-13.jpg';
-import foodImage14 from '@/assets/gallery/frye-food-14.jpg';
-import foodImage15 from '@/assets/gallery/frye-food-15.jpg';
-import foodImage16 from '@/assets/gallery/frye-food-16.jpg';
-
 interface ImageInfo {
   src: string;
   alt: string;
@@ -27,84 +9,64 @@ interface ImageInfo {
 
 const galleryImages: ImageInfo[] = [
   {
-    src: foodImage1,
-    alt: 'Fried chicken sandwich with fries',
-    description: 'Our signature fried chicken sandwich served with crispy fries'
+    src: '/images/gallery/fried-calamari.jpg',
+    alt: 'Fried Calamari',
+    description: 'Tender calamari lightly battered and fried to perfection, served with our signature dipping sauce'
   },
   {
-    src: foodImage2,
-    alt: 'Beef burger on a brioche bun',
-    description: 'Juicy beef patty on a fresh brioche bun with lettuce'
+    src: '/images/gallery/fried-pickles.jpg',
+    alt: 'Fried Pickles',
+    description: 'Crispy fried pickle slices with a light, flavorful coating, served with our house-made ranch'
   },
   {
-    src: foodImage3,
-    alt: 'Fried seafood over fries',
-    description: 'Fresh seafood perfectly fried and served over crispy fries'
+    src: '/images/gallery/fish-tacos.jpg',
+    alt: 'Fish Tacos',
+    description: 'Fresh fish tacos with cabbage slaw, red onions, corn, and our special sauce in corn tortillas'
   },
   {
-    src: foodImage4,
-    alt: 'Beef tacos with toppings',
-    description: 'Savory beef tacos with fresh vegetables and special sauce'
+    src: '/images/gallery/deluxe-burger.jpg',
+    alt: 'Deluxe Burger',
+    description: 'Our famous deluxe burger with multiple beef patties, cheese, bacon, tomato and lettuce on a brioche bun'
   },
   {
-    src: foodImage5,
-    alt: 'Double cheeseburger with fries',
-    description: 'Our famous double cheeseburger with all the fixings and fries'
+    src: '/images/gallery/cornbread-chili.jpg',
+    alt: 'Cornbread and Chili',
+    description: 'Homemade cornbread served with our hearty seafood chili topped with melted cheese'
   },
   {
-    src: foodImage6,
-    alt: 'Triple decker burger',
-    description: 'For the serious appetite - our triple decker burger with cheese'
+    src: '/images/gallery/fish-sandwich.jpg',
+    alt: 'Fried Fish Sandwich',
+    description: 'Crispy fried fish fillet on a fresh roll with lettuce and tomato'
   },
   {
-    src: foodImage7,
-    alt: 'Lobster pasta dish',
-    description: 'Fresh Maine lobster served with pasta in a creamy sauce'
+    src: '/images/gallery/seafood-platter.jpg',
+    alt: 'Seafood Platter with Buffalo Tenders',
+    description: 'A generous platter with fried seafood and buffalo-style chicken tenders with mac & cheese'
   },
   {
-    src: foodImage8,
-    alt: 'Assorted fried foods platter',
-    description: 'Variety platter with fried chicken, sandwiches, and sides'
+    src: '/images/gallery/bbq-tenders.jpg',
+    alt: 'BBQ Smothered Tenders',
+    description: 'Crispy chicken tenders smothered in tangy BBQ sauce with pulled pork'
   },
   {
-    src: foodImage9,
-    alt: 'Pulled pork sandwich',
-    description: 'Savory pulled pork sandwich with pickles on a brioche bun'
+    src: '/images/gallery/chicken-patties.jpg',
+    alt: 'Homemade Chicken Patties',
+    description: 'Our signature hand-formed chicken patties, perfectly seasoned and cooked to a golden brown'
   },
   {
-    src: foodImage10,
-    alt: 'Cheeseburger with fries and nuggets',
-    description: 'Classic cheeseburger served with fries and chicken nuggets'
+    src: '/images/gallery/chicken-sandwich.jpg',
+    alt: 'Fried Chicken Sandwich',
+    description: 'Crispy fried chicken pieces on a fresh bun with lettuce and tomato'
   },
   {
-    src: foodImage11,
-    alt: 'Fried fish sandwich',
-    description: 'Crispy fried fish sandwich with fresh lettuce'
+    src: '/images/gallery/apple-pie.jpg',
+    alt: 'Fried Apple Pies',
+    description: 'Flaky hand pies filled with sweet apple filling and dusted with powdered sugar'
   },
   {
-    src: foodImage12,
-    alt: 'Fried chicken sandwich',
-    description: 'Crispy fried chicken sandwich with all the fixings'
-  },
-  {
-    src: foodImage13,
-    alt: 'Lobster roll',
-    description: 'Maine lobster roll filled with fresh lobster meat'
-  },
-  {
-    src: foodImage14,
-    alt: 'Double burgers',
-    description: 'Two of our signature burgers, freshly made and ready to enjoy'
-  },
-  {
-    src: foodImage15,
-    alt: 'Family meal with burger and fried chicken',
-    description: 'Perfect family meal with burger, chicken nuggets, and fries'
-  },
-  {
-    src: foodImage16,
-    alt: 'Seafood platter with onion rings',
-    description: 'Generous seafood platter with crispy onion rings and dipping sauces'
+    src: '/images/gallery/burger-combo.jpg',
+    alt: 'Burger Combo Meal',
+    description: 'Complete meal with a deluxe burger, crispy fried seafood pieces, and crinkle-cut fries'
   }
 ];
 
