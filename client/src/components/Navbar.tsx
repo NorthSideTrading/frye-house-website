@@ -40,8 +40,8 @@ export default function Navbar() {
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' 
-        : 'bg-white shadow-sm py-4'
+        ? 'bg-[var(--color-surface)]/95 backdrop-blur-sm shadow-md py-2' 
+        : 'bg-[var(--color-surface)] shadow-sm py-4'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -50,18 +50,18 @@ export default function Navbar() {
               <div className={`transition-all duration-300 flex items-center ${
                 scrolled ? 'h-8' : 'h-10'
               }`}>
-                <h1 className="text-xl md:text-2xl font-black tracking-wide transition-all duration-300">
-                  FRYE<span className="inline-block mx-0.5 transform translate-y-0.5">⚓</span>HOUSE
+                <h1 className="text-xl md:text-2xl font-black tracking-wide transition-all duration-300 text-[var(--color-red)]">
+                  FRYE<span className="inline-block mx-0.5 transform translate-y-0.5 text-[var(--color-yellow)]">⚓</span>HOUSE
                 </h1>
               </div>
-              <span className="text-xs text-primary/70 mt-0.5 tracking-wider font-light">Farmingdale, Maine</span>
+              <span className="text-xs text-[var(--color-mint)] mt-0.5 tracking-wider font-light">Farmingdale, Maine</span>
             </div>
           </Link>
           
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden text-primary focus:outline-none"
+            className="md:hidden text-[var(--color-text)] focus:outline-none"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -82,16 +82,16 @@ export default function Navbar() {
                   href={path} 
                   className={`relative px-4 py-2 rounded-md font-semibold transition-all duration-300 ${
                     isActive(path) 
-                      ? 'text-accent' 
-                      : 'text-primary hover:text-accent'
+                      ? 'text-[var(--color-red)]' 
+                      : 'text-[var(--color-text)] hover:text-[var(--color-blue)]'
                   }`}
                 >
                   {isActive(path) && (
-                    <span className="absolute inset-0 bg-accent/10 rounded-md -z-10"></span>
+                    <span className="absolute inset-0 bg-[var(--color-red)]/10 rounded-md -z-10"></span>
                   )}
                   {label}
                   {isActive(path) && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-accent"></span>
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-[var(--color-yellow)]"></span>
                   )}
                 </Link>
               );
