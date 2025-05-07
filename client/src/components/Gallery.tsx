@@ -122,47 +122,50 @@ export default function Gallery() {
   };
 
   return (
-    <section className="py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6 text-center">
-          Food Gallery
-        </h2>
-        <p className="text-lg text-center text-foreground mb-12 max-w-3xl mx-auto">
-          Take a look at some of our delicious offerings. These authentic photos showcase the 
-          quality and care we put into every dish at Frye House.
-        </p>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="container mx-auto px-4">        
+        {/* Simple Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className="overflow-hidden rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105 hover:shadow-lg"
+              className="group rounded-xl overflow-hidden shadow-md hover:shadow-lg cursor-pointer transition-all duration-300 bg-white"
               onClick={() => openImage(image)}
             >
-              <div className="h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img 
                   src={image.src} 
                   alt={image.alt} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white text-sm font-medium">{image.alt}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Image modal */}
+        {/* Enhanced image modal */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
-            <div className="max-w-4xl w-full bg-white rounded-lg overflow-hidden relative">
+          <div 
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+            onClick={closeImage}
+          >
+            <div 
+              className="max-w-5xl w-full bg-white rounded-xl overflow-hidden relative shadow-2xl"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+            >
               <button 
                 onClick={closeImage}
-                className="absolute top-4 right-4 text-white bg-primary p-2 rounded-full hover:bg-accent transition-colors"
+                className="absolute top-5 right-5 z-20 text-white bg-black/60 hover:bg-accent p-2 rounded-full transition-colors duration-300"
                 aria-label="Close"
               >
                 <X className="h-6 w-6" />
               </button>
               
-              <div className="w-full h-[60vh]">
+              <div className="w-full h-[70vh] bg-neutral-100">
                 <img 
                   src={selectedImage.src} 
                   alt={selectedImage.alt} 
@@ -170,9 +173,10 @@ export default function Gallery() {
                 />
               </div>
               
-              <div className="p-4 bg-white">
-                <h3 className="text-xl font-semibold text-primary">{selectedImage.alt}</h3>
-                <p className="text-foreground mt-2">{selectedImage.description}</p>
+              <div className="p-6 bg-white">
+                <h3 className="text-2xl font-heading font-bold text-primary">{selectedImage.alt}</h3>
+                <div className="w-16 h-0.5 bg-accent mt-2 mb-3"></div>
+                <p className="text-gray-700 mt-2 leading-relaxed">{selectedImage.description}</p>
               </div>
             </div>
           </div>
