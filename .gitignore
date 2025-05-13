@@ -1,4 +1,6 @@
-node_modules
+/node_modules
+/.replit
+/client/dist
 dist
 .DS_Store
 server/public
