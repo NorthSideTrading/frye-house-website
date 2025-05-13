@@ -5,6 +5,7 @@ import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
@@ -15,6 +16,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    assetsDir: "assets",
     rollupOptions: {
       input: resolve(__dirname, 'index.html')
     }
