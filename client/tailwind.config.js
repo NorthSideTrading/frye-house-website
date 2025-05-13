@@ -87,5 +87,5 @@ export default {
       },
     },
   },
-  plugins: ["tailwindcss-animate", "@tailwindcss/typography"].map(require),
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 }
