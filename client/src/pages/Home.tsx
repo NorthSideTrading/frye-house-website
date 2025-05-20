@@ -251,7 +251,7 @@ export default function Home() {
                       </div>
                       <h3 className="text-xl font-heading font-semibold mb-3">Fresh Maine Seafood</h3>
                       <p className="text-foreground">
-                        From our famous lobster rolls to perfectly fried haddock, scallops, and clams, we serve only the freshest seafood caught locally.
+                        From our famous <strong>lobster rolls Augusta Maine</strong> loves to perfectly fried haddock, scallops, and clams, we serve only the freshest <strong>seafood Augusta Maine</strong> visitors travel miles to enjoy.
                       </p>
                       <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
                         Explore Menu →
@@ -264,8 +264,11 @@ export default function Home() {
                     <div className="h-56 overflow-hidden relative">
                       <img 
                         src="/images/specialties/burger-hq.jpg" 
-                        alt="Frye House Double Cheeseburger" 
-                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                        alt="Double cheeseburger - classic American fare in Augusta Maine" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                        loading="lazy" 
+                        width="600" 
+                        height="400" 
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -278,7 +281,7 @@ export default function Home() {
                       </div>
                       <h3 className="text-xl font-heading font-semibold mb-3">Classic American Fare</h3>
                       <p className="text-foreground">
-                        Savor our juicy burgers, golden fries, and hearty sandwiches – satisfying comfort food that brings people together.
+                        Savor our juicy burgers, golden fries with the perfect crisp, and hearty sandwiches – satisfying <strong>comfort food Augusta Maine</strong> families return for again and again.
                       </p>
                       <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
                         Explore Menu →
@@ -296,22 +299,22 @@ export default function Home() {
         
         {/* Call to Action */}
         <div className="bg-primary text-white text-center py-8 px-4 md:py-12 md:px-6 rounded-xl mt-12 md:mt-20 mb-8">
-          <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">Experience the Taste of Maine Today</h3>
-          <p className="mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">Join us for a meal at Frye House and discover why we've become a favorite in Farmingdale since 2017.</p>
+          <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">Experience the Best Seafood & Chicken in Augusta Maine Today</h3>
+          <p className="mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">Join us for a meal at Frye House and discover why our golden-crispy seafood and juicy chicken have made us a favorite in Farmingdale and Augusta since 2017.</p>
           <div className="flex flex-col gap-3 justify-center">
             <Link href="/contact">
               <Button className="bg-white text-primary hover:bg-amber-100 font-semibold py-2 px-6 rounded-md transition duration-300 shadow-md w-full md:w-auto">
-                Get Directions
+                Get Directions to Frye House
               </Button>
             </Link>
             <Link href="/menu">
               <Button className="bg-accent hover:bg-accent/90 text-white font-semibold py-2 px-6 rounded-md transition duration-300 shadow-md w-full md:w-auto">
-                View Full Menu
+                View Full Seafood & Chicken Menu
               </Button>
             </Link>
             <Link href="/contact">
               <Button className="bg-secondary hover:bg-secondary/80 text-white font-semibold py-2 px-6 rounded-md transition duration-300 shadow-md w-full md:w-auto">
-                Contact Us
+                Contact Our Augusta-Farmingdale Location
               </Button>
             </Link>
           </div>

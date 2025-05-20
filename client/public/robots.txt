@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /staging/
+Sitemap: https://www.fryehousemaine.com/sitemap.xml
