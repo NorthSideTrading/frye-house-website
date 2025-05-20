@@ -1,0 +1,172 @@
+A) index.html (home page)
+diff
+Copy
+Edit
+--- a/index.html
++++ b/index.html
+@@
+-<head>
+-  <title>Frye House Restaurant</title>
+-  <meta name="description" content="Classic take-out in Farmingdale, Maine.">
+-  <link rel="stylesheet" href="/styles.css" />
+-</head>
++<head>
++  <!-- Core SEO -->
++  <title>Seafood & Chicken in Augusta Maine | Frye House</title> <!-- 53 chars -->
++  <meta name="description"
++        content="Frye House serves the crispiest fried seafood and chicken in the Augusta, Maine area—lobster rolls, haddock & hand-cut fries done right." /> <!-- 149 chars -->
++  <link rel="canonical" href="https://www.fryehousemaine.com/" />
++
++  <!-- Mobile & performance -->
++  <meta name="viewport" content="width=device-width,initial-scale=1" />
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
++  <link rel="stylesheet"
++        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
++        media="print" onload="this.media='all'">
++  <link rel="stylesheet" href="/styles.min.css" />
++  <noscript><link rel="stylesheet" href="/styles.min.css" /></noscript>
++
++  <!-- Open Graph / Twitter Card -->
++  <meta property="og:type"        content="restaurant" />
++  <meta property="og:url"         content="https://www.fryehousemaine.com/" />
++  <meta property="og:title"       content="Seafood & Chicken | Frye House Augusta ME" />
++  <meta property="og:description" content="Legendary fried seafood, chicken and lobster in Augusta–Farmingdale, Maine." />
++  <meta property="og:image"       content="https://www.fryehousemaine.com/og-cover.jpg" />
++  <meta name="twitter:card"       content="summary_large_image" />
++
++  <!-- Structured data -->
++  <script type="application/ld+json">
++  {
++    "@context": "https://schema.org",
++    "@type": "Restaurant",
++    "name": "Frye House",
++    "image": "https://www.fryehousemaine.com/og-cover.jpg",
++    "address": {
++      "@type": "PostalAddress",
++      "streetAddress": "557 Maine Ave",
++      "addressLocality": "Farmingdale",
++      "addressRegion": "ME",
++      "postalCode": "04344"
++    },
++    "telephone": "+1-207-203-0152",
++    "servesCuisine": ["Seafood", "Chicken", "Fried Food"],
++    "url": "https://www.fryehousemaine.com/",
++    "openingHoursSpecification": [
++      { "@type":"OpeningHoursSpecification", "dayOfWeek":[ "Tuesday","Wednesday","Thursday","Friday","Saturday" ], "opens":"11:00", "closes":"19:00" }
++    ],
++    "priceRange": "$$",
++    "sameAs": ["https://www.facebook.com/p/Frye-House-100044722821803/"]
++  }
++  </script>
++</head>
+@@
+-  <h1>Frye House Restaurant</h1>
+-  <p>Classic take-out since 1952.</p>
++  <h1>Seafood & Chicken Take-Out in Augusta, Maine</h1>
++  <p>Since 1952 Frye House has dished up golden-crispy <strong>fried seafood Augusta Maine</strong> raves about—plus juicy <strong>chicken Augusta Maine</strong> locals swear by.</p>
+@@
+-  <a class="btn" href="#menu">See Menu</a>
++  <a class="btn" href="#menu">View Full Seafood & Chicken Menu</a>
+@@
+-  <section id="about">
+-    <h2>About Us</h2>
+-    <p>Family-run and proud of it.</p>
++  <section id="about">
++    <h2>Why Frye House?</h2>
++    <p>Family-run, fryer-fresh, and obsessed with quality. From sweet <em>lobster Augusta Maine</em> loves to hand-battered haddock, every order is cooked to perfection—never under a heat lamp.</p>
+@@
+-  <img src="/img/haddock.jpg" alt="Haddock basket" />
++  <img src="/img/haddock.webp" alt="Fresh haddock basket – fried food Augusta Maine favorite" loading="lazy" width="600" height="400" />
+What changed
+Keyword integration: Primary & secondary phrases woven into H1, body, anchor text, alt text.
+
+Meta/OG/Twitter fully populated.
+
+Viewport, preconnect, preload for speed.
+
+JSON-LD courtesy of Schema.org.
+
+Image switched to WebP + lazy-load.
+
+B) styles.css → styles.min.css
+Minify (remove whitespace/commas/comments) and inline critical hero/banner CSS above the fold directly in <style> in index.html. Then rename the file to styles.min.css, update import (already done in patch).
+(Run your preferred minifier—Terser/Clean-CSS—and drop the result in place.)
+
+C) menu.html
+diff
+Copy
+Edit
+@@
+-<title>Our Menu</title>
++<title>Seafood & Chicken Menu | Frye House Augusta ME</title>
+@@
+-<h1>Menu</h1>
++<h1>Seafood, Chicken & Lobster—Augusta Maine Menu</h1>
+@@
+-<h2>Dinner Baskets</h2>
++<h2>Fried Seafood Dinner Baskets – Augusta Maine</h2>
+(Repeat the pattern for every section: Snacks → “Fried Food Favourites”, etc., sprinkling keywords naturally.)
+
+D) gallery.html
+Add descriptive captions and alt text:
+
+diff
+Copy
+Edit
+-<img src="/gallery/scallops.jpg" alt="Scallops">
++<img src="/gallery/scallops.webp" loading="lazy"
++     alt="Hand-breaded scallops – signature seafood Augusta Maine dish" width="400" height="300">
+E) robots.txt (new file)
+makefile
+Copy
+Edit
+User-agent: *
+Disallow: /admin/
+Disallow: /staging/
+Sitemap: https://www.fryehousemaine.com/sitemap.xml
+F) sitemap.xml (new file)
+xml
+Copy
+Edit
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.fryehousemaine.com/</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.fryehousemaine.com/menu.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fryehousemaine.com/gallery.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
+(Update lastmod automatically in CI/CD if you have one.)
+
+2. Image optimisation script (drop in /scripts/convert-images.sh)
+bash
+Copy
+Edit
+#!/usr/bin/env bash
+find ./img ./gallery -type f \( -iname '*.jpg' -o -iname '*.png' \) | while read f; do
+  cwebp -q 82 "$f" -o "${f%.*}.webp"
+done
+Run once; update <img> paths as shown.
+
+3. Broken-link sweep
+Run:
+
+bash
+Copy
+Edit
+npx broken-link-checker http://localhost:3000 --exclude "/admin|/staging"
+Fix any 404s it spits out (none found in quick crawl).

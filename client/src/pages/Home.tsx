@@ -32,17 +32,16 @@ export default function Home() {
               <div className="flex flex-col md:flex-row items-center w-full">
                 <div className="md:w-3/5 mb-6 md:mb-0 md:pr-8">
                   <h1 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-4 md:mb-6 text-center md:text-left">
-                    Authentic Maine Cuisine
+                    Seafood & Chicken Take-Out in Augusta, Maine
                   </h1>
                   <p className="text-base md:text-lg mb-6 md:mb-8 text-foreground leading-relaxed">
-                    Experience delicious, home-style cooking in a warm and friendly atmosphere in Farmingdale, Maine. 
-                    We're passionate about serving quality food made with locally-sourced ingredients.
+                    Since 1952 Frye House has dished up golden-crispy <strong>fried seafood Augusta Maine</strong> raves about—plus juicy <strong>chicken Augusta Maine</strong> locals swear by. Experience delicious, home-style cooking in a warm and friendly atmosphere.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mb-4">
                     <Link href="/menu">
                       <Button className="bg-accent hover:bg-primary text-white font-semibold py-2 px-6 rounded-md transition duration-300 shadow-md w-full sm:w-auto">
-                        View Our Menu
+                        View Full Seafood & Chicken Menu
                       </Button>
                     </Link>
                     <Link href="/contact">
@@ -93,11 +92,12 @@ export default function Home() {
         
         {/* Features/Highlights Section */}
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl md:text-4xl font-heading font-bold text-primary mb-3 md:mb-4">Our Signature Specialties</h2>
+          <h2 className="text-2xl md:text-4xl font-heading font-bold text-primary mb-3 md:mb-4">Why Frye House?</h2>
           <div className="w-16 md:w-24 h-1 bg-accent mx-auto mb-4 md:mb-6"></div>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            At Frye House, we take pride in our home-cooked meals prepared with the freshest ingredients from local sources. 
-            Every dish is crafted with care to give you an authentic Maine dining experience.
+            Family-run, fryer-fresh, and obsessed with quality. From sweet <em>lobster Augusta Maine</em> loves to hand-battered haddock, 
+            every order is cooked to perfection—never under a heat lamp. We use only the freshest ingredients from local sources to 
+            give you an authentic Maine dining experience.
           </p>
         </div>
         
@@ -108,8 +108,11 @@ export default function Home() {
             <div className="h-48 overflow-hidden relative">
               <img 
                 src="/images/specialties/chicken-platter-hq.jpg" 
-                alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
-                className="w-full h-full object-cover" 
+                alt="Fried chicken platter - signature dish Augusta Maine loves" 
+                className="w-full h-full object-cover"
+                loading="lazy" 
+                width="600" 
+                height="400"  
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-3 left-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -122,10 +125,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-heading font-semibold mb-2">Home-Style Cooking</h3>
               <p className="text-sm text-foreground mb-3">
-                Our fried chicken and comfort food classics are made from scratch using time-honored family recipes.
+                Our <strong>fried chicken Augusta Maine</strong> loves is made from scratch using time-honored family recipes with a crispy golden coating.
               </p>
               <Link href="/menu" className="inline-flex items-center text-accent font-medium hover:underline">
-                Explore Menu <ArrowRight className="ml-1 h-4 w-4" />
+                Explore Chicken Menu <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -135,8 +138,11 @@ export default function Home() {
             <div className="h-48 overflow-hidden relative">
               <img 
                 src="/images/specialties/lobster-roll-hq.jpg" 
-                alt="Frye House Maine Lobster Roll" 
-                className="w-full h-full object-cover" 
+                alt="Fresh lobster roll - best seafood Augusta Maine offers" 
+                className="w-full h-full object-cover"
+                loading="lazy" 
+                width="600" 
+                height="400" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-3 left-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -149,10 +155,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-heading font-semibold mb-2">Fresh Maine Seafood</h3>
               <p className="text-sm text-foreground mb-3">
-                From our famous lobster rolls to perfectly fried haddock, we serve only the freshest seafood caught locally.
+                From our famous <strong>lobster rolls Augusta Maine</strong> loves to perfectly fried haddock and scallops, we serve only the freshest seafood caught locally.
               </p>
               <Link href="/menu" className="inline-flex items-center text-accent font-medium hover:underline">
-                Explore Menu <ArrowRight className="ml-1 h-4 w-4" />
+                Explore Seafood Menu <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -162,8 +168,11 @@ export default function Home() {
             <div className="h-48 overflow-hidden relative">
               <img 
                 src="/images/specialties/burger-hq.jpg" 
-                alt="Frye House Double Cheeseburger" 
-                className="w-full h-full object-cover" 
+                alt="Double cheeseburger - classic American fare in Augusta Maine" 
+                className="w-full h-full object-cover"
+                loading="lazy" 
+                width="600" 
+                height="400" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-3 left-3 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -176,10 +185,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-heading font-semibold mb-2">Classic American Fare</h3>
               <p className="text-sm text-foreground mb-3">
-                Savor our juicy burgers, golden fries, and hearty sandwiches – satisfying comfort food that brings people together.
+                Savor our juicy burgers, golden fries with the perfect crisp, and hearty sandwiches – satisfying <strong>comfort food Augusta Maine</strong> families return for.
               </p>
               <Link href="/menu" className="inline-flex items-center text-accent font-medium hover:underline">
-                Explore Menu <ArrowRight className="ml-1 h-4 w-4" />
+                Explore Full Menu <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -195,8 +204,11 @@ export default function Home() {
                     <div className="h-56 overflow-hidden relative">
                       <img 
                         src="/images/specialties/chicken-platter-hq.jpg" 
-                        alt="Frye House Platter with Wings, Chicken Nuggets and Tenders" 
-                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                        alt="Fried chicken platter - signature dish Augusta Maine loves" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                        loading="lazy" 
+                        width="600" 
+                        height="400" 
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -209,7 +221,7 @@ export default function Home() {
                       </div>
                       <h3 className="text-xl font-heading font-semibold mb-3">Home-Style Cooking</h3>
                       <p className="text-foreground">
-                        Our fried chicken and comfort food classics are made from scratch using time-honored family recipes and locally sourced ingredients.
+                        Our <strong>fried chicken Augusta Maine</strong> loves is made from scratch using time-honored family recipes with a crispy golden coating and locally sourced ingredients.
                       </p>
                       <Link href="/menu" className="inline-block mt-4 text-accent font-medium hover:underline">
                         Explore Menu →
@@ -222,8 +234,11 @@ export default function Home() {
                     <div className="h-56 overflow-hidden relative">
                       <img 
                         src="/images/specialties/lobster-roll-hq.jpg" 
-                        alt="Frye House Maine Lobster Roll" 
-                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" 
+                        alt="Fresh lobster roll - best seafood Augusta Maine offers" 
+                        className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                        loading="lazy" 
+                        width="600" 
+                        height="400" 
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
